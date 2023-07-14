@@ -965,6 +965,70 @@ button,
   color: #15ab07;
 }
 
+.main-header {
+  background-color: #102654;
+  padding: 30px 0;
+}
+@media (max-width: 767px) {
+  .main-header {
+    padding: 15px 0;
+  }
+}
+
+.main-header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  margin-right: 10px;
+}
+
+@media (max-width: 1199px) {
+  .main-header__logo img {
+    width: 82px;
+    height: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__logo img {
+    width: 69px;
+    height: 12px;
+  }
+}
+
+.main-header__phone {
+  color: #ffffff;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 26px;
+  margin-left: 10px;
+  padding: 7px 0;
+}
+@media (max-width: 1199px) {
+  .main-header__phone {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__phone {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .custom-select {
   position: relative;
   width: 300px;
