@@ -1,7 +1,106 @@
 .promo {
   padding: 51px 0;
+  background-image: conic-gradient(from 151deg at 16.03% 39.06%, $color-dark-cerulean 32.23633825778961deg, $color-venetian-red 313.3060026168823deg, $color-dark-cerulean 360deg);
+
+  @include vp-1199 {
+    padding: 82px 0;
+  }
+
+  @include vp-767 {
+    padding: 115px 0 80px 0;
+  }
 }
 
 .promo__wrapper {
   display: flex;
+  color: $color-default-white;
+  align-items: center;
+  position: relative;
+}
+
+.promo__list {
+  margin: 0 17px 0 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    margin: 0;
+  }
+}
+
+.promo__info {
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  text-align: right;
+  margin-right: 63px;
+
+  @include vp-1199 {
+    margin-right: 30px;
+  }
+}
+
+.promo__info span {
+  font-size: 48px;
+  text-transform: lowercase;
+  display: block;
+  margin: 0 50px 25px 0;
+
+  @include vp-1199 {
+    font-size: 34px;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+  }
+}
+
+.promo__info h1 {
+  font-size: 92px;
+  line-height: 110px;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 25px 0;
+
+  @include vp-1199 {
+    font-size: 72px;
+    line-height: 86px;
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 94px;
+  }
+}
+
+.promo__link {
+  border: 4px solid;
+  width: 230px;
+
+  @include vp-1199 {
+  width: 183px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.promo__image-wrapper img {
+  @include vp-1199 {
+    width: 324px;
+    height: 390px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
 }

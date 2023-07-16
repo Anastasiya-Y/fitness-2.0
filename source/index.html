@@ -48,12 +48,17 @@
                 </li>
               </ul>
               <div class="promo__info">
-                <span class="promo__location">Омск</span>
-                <h1 class="promo__title">Фитнес Центр</h1></div>
-                <a class="promo__link" href="#" aria-label="Купить абонемент в фитнес-центр.">Купить абонемент</a>
+                <span>Омск</span>
+                <h1>Фитнес<br>Центр</h1>
+                <a class="promo__link btn" href="#" aria-label="Купить абонемент в фитнес-центр.">Купить абонемент</a>
               </div>
               <div class="promo__image-wrapper">
-                <img src="img/content/promo-desktop.jpg" width="500" height="556" alt="Промо-фото фитнес-центра.">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/promo-tablet.webp 1x, img/content/promo-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/promo-desktop.webp 1x, img/content/promo-desktop@2x.webp 2x">
+                  <source media="(max-width: 1199px)" srcset="img/content/promo-tablet.jpg 1x, img/content/promo-tablet@2x.jpg 2x">
+                  <img src="img/content/promo-desktop.jpg" srcset="img/content/promo-desktop@2x.jpg 2x" width="500" height="556" alt="Промо-фото фитнес-центра.">
+                </picture>
               </div>
             </div>
           </div>
@@ -68,19 +73,19 @@
             </a>
             <nav class="main-nav">
               <ul class="main-nav__list">
-                <li class="main-nav__item main-nav__item--service">
+                <li class="main-nav__item">
                   <a class="main-nav__link" href="#">Услуги</a>
                 </li>
-                <li class="main-nav__item main-nav__item--subscription">
+                <li class="main-nav__item">
                   <a class="main-nav__link" href="#">Абонементы</a>
                 </li>
-                <li class="main-nav__item main-nav__item--promotion">
+                <li class="main-nav__item">
                   <a class="main-nav__link" href="#">Акции</a>
                 </li>
-                <li class="main-nav__item main-nav__item--trainer">
+                <li class="main-nav__item">
                   <a class="main-nav__link" href="#">Тренеры</a>
                 </li>
-                <li class="main-nav__item main-nav__item--schedule">
+                <li class="main-nav__item">
                   <a class="main-nav__link" href="#">Расписание</a>
                 </li>
               </ul>
