@@ -39,10 +39,11 @@
   color: $color-default-white;
   font-family: $ff-alumni-sans;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 25px;
   line-height: 26px;
   margin-left: 10px;
-  padding: 7px 0;
+  padding: 3px 0;
+  letter-spacing: 0.05em;
 
   @include vp-1199 {
     font-size: 24px;
