@@ -1222,6 +1222,16 @@ button,
   }
 }
 
+.promo {
+  padding: 51px 0;
+}
+
+.promo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
