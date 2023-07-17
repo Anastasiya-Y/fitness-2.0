@@ -25,7 +25,7 @@
         <div class="container">
           <div class="main-header__wrapper">
             <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу сайта Supergym.">
-              <img src="img/svg/logo.svg" width="118" height="22" alt="Логотип сайта фитнес-центра Supergym.">
+              <img src="img/svg/logo.svg" width="120" height="24" alt="Логотип сайта фитнес-центра Supergym.">
             </a>
             <a class="main-header__phone" href="tel:88005555555" aria-label="Позвонить в фитнес-центр Supergym.">8-800-555-55-55</a>
           </div>
@@ -65,22 +65,46 @@
         </div>
         <div class="gym">
           <div class="container">
-            <div class="gym__info">
-              <h2>Тренажерный зал</h2>
-              <span>Просторный зал площадью 900&nbsp;кв/м</span>
-              <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-              <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+            <div class="gym__wrapper">
+              <div class="gym__info">
+                <h2>Тренажерный зал</h2>
+                <span>Просторный зал площадью 900&nbsp;кв/м</span>
+                <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+                <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+              </div>
+              <div class="gym__media-wrapper">
+                <div class="gym__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/content/gym-photo-mobile.webp 1x, img/content/gym-photo-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/gym-photo-tablet.webp 1x, img/content/gym-photo-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/content/gym-photo-desktop.webp 1x, img/content/gym-photo-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/content/gym-photo-mobile.jpg 1x, img/content/gym-photo-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="img/content/gym-photo-tablet.jpg 1x, img/content/gym-photo-tablet@2x.jpg 2x">
+                    <img src="img/content/gym-photo-desktop.jpg" srcset="img/content/gym-photo-desktop@2x.jpg 2x" width="660" height="401" alt="Фото тренажерного зала.">
+                  </picture>
+                </div>
+                <div class="gym__video-wrapper">
+                  <a class="gym__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/promo-video/promo-video-mobile.webp 1x, img/promo-video/promo-video-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/promo-video/promo-video-tablet.webp 1x, img/promo-video/promo-video-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/promo-video/promo-video-desktop.webp 1x, img/promo-video/promo-video-desktop@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="img/promo-video/promo-video-mobile.jpg 1x, img/promo-video/promo-video-mobile@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" srcset="img/promo-video/promo-video-tablet.jpg 1x, img/promo-video/promo-video-tablet@2x.jpg 2x">
+                      <img src="img/promo-video/promo-video-desktop.jpg" srcset="img/promo-video/promo-video-desktop@2x.jpg 2x" width="364" height="251" alt="Бесплатные интерактивные онлайн-курсы HTML Academy.">
+                    </picture>
+                  </a>
+                  <button class="gym__video-button" aria-label="Запустить видео.">
+                    <svg width="100" height="100">
+                      <use href="img/sprite.svg#video-button"></use>
+                    </svg>
+                  </button>
+                  <video controls="controls" poster="video/promo-video.jpg">
+                    <source src="video/Бесплатные интерактивные онлайн-курсы.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="gym__image-wrapper">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/content/gym-photo-mobile.webp 1x, img/content/gym-photo-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/gym-photo-tablet.webp 1x, img/content/gym-photo-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/content/gym-photo-desktop.webp 1x, img/content/gym-photo-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="img/content/gym-photo-mobile.jpg 1x, img/content/gym-photo-mobile@2x.jpg 2x">
-              <source media="(max-width: 1199px)" srcset="img/content/gym-photo-tablet.jpg 1x, img/content/gym-photo-tablet@2x.jpg 2x">
-              <img src="img/content/gym-photo-desktop.jpg" srcset="img/content/gym-photo-desktop@2x.jpg 2x" width="660" height="401" alt="Фото тренажерного зала.">
-            </picture>
           </div>
         </div>
       </main>
