@@ -1,6 +1,6 @@
 .promo {
   padding: 51px 0;
-  background-image: conic-gradient(from 151deg at 16.03% 39.06%, $color-dark-cerulean 32.23633825778961deg, $color-venetian-red 313.3060026168823deg, $color-dark-cerulean 360deg);
+  background-image: $red-blue-conic;
 
   @include vp-1199 {
     padding: 82px 0;
