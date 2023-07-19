@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* stylelint-disable */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -973,6 +974,48 @@ button,
   color: #15ab07;
 }
 
+[data-tabs=parent] {
+  overflow: hidden;
+}
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
 .gym {
   padding: 120px 0;
 }
@@ -1705,6 +1748,7 @@ button,
 .subscription {
   text-align: center;
   background-color: #f8f9fc;
+  padding: 120px 0;
 }
 
 .subscription h2 {
@@ -1757,10 +1801,6 @@ button,
   z-index: 1;
 }
 
-.subscription__control-item:not(:last-child) {
-  margin-right: 20px;
-}
-
 .subscription__control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1777,6 +1817,10 @@ button,
   cursor: pointer;
   padding: 20px 10px;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.subscription__control:not(:last-child) {
+  margin-right: 20px;
 }
 
 .subscription__control.is-active {
@@ -1826,37 +1870,18 @@ button,
   font-weight: 400;
 }
 
-.subscription__price {
-  font-family: "Rouble", "Arial", sans-serif;
-  font-size: 60px;
-  line-height: 48px;
-  font-weight: 600;
+.subscription__item span {
+  display: block;
+  position: relative;
   margin-bottom: 59px;
-  position: relative;
-  text-align: right;
-  min-height: 48px;
-}
-
-.subscription__price span {
-  z-index: 2;
-  position: relative;
-}
-
-.subscription__price span:first-of-type {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   color: #103aae;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
   z-index: 2;
 }
-.subscription__price span:first-of-type::before {
+.subscription__item span::before {
   content: attr(data-price);
   position: absolute;
   bottom: 10px;
@@ -1865,6 +1890,17 @@ button,
   line-height: 100px;
   color: #e8e8e8;
   z-index: -1;
+}
+.subscription__item span::after {
+  content: "₽";
+  position: absolute;
+  top: 0;
+  right: -42px;
+  font-family: "Rouble", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 48px;
+  font-weight: 600;
+  color: #102654;
 }
 
 .subscription__link {

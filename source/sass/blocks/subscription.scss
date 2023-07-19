@@ -1,6 +1,7 @@
 .subscription {
   text-align: center;
   background-color: $color-ghost-white;
+  padding: 120px 0;
 }
 
 .subscription h2 {
@@ -48,10 +49,6 @@
   }
 }
 
-.subscription__control-item:not(:last-child) {
-  margin-right: 20px;
-}
-
 .subscription__control {
   display: flex;
   justify-content: center;
@@ -62,6 +59,10 @@
   cursor: pointer;
   padding: 20px 10px;
   background-color: $color-transparent;
+}
+
+.subscription__control:not(:last-child) {
+  margin-right: 20px;
 }
 
 .subscription__control.is-active {
@@ -111,32 +112,15 @@
   font-weight: 400;
 }
 
-.subscription__price {
-  font-family: $ff-rouble;
-  font-size: 60px;
-  line-height: 48px;
-  font-weight: 600;
+.subscription__item span {
+  display: block;
+  position: relative;
   margin-bottom: 59px;
-  position: relative;
-  text-align: right;
-  min-height: 48px;
-}
-
-.subscription__price span {
-  z-index: 2;
-  position: relative;
-}
-
-.subscription__price span:first-of-type {
   font-family: $ff-roboto-condensed;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
   color: $color-egyptian-blue;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
   z-index: 2;
 
   &::before {
@@ -148,6 +132,18 @@
     line-height: 100px;
     color: $color-whisper;
     z-index: -1;
+  }
+
+  &::after {
+    content: "₽";
+    position: absolute;
+    top: 0;
+    right: -42px;
+    font-family: $ff-rouble;
+    font-size: 60px;
+    line-height: 48px;
+    font-weight: 600;
+    color: $color-sapphire;
   }
 }
 
