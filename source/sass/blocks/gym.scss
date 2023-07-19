@@ -2,7 +2,7 @@
   padding: 120px 0;
 
   @include vp-1199 {
-    padding: 100px 0;
+    padding: 105px 0;
   }
 
   @include vp-767 {
@@ -27,11 +27,11 @@
   @include vp-1199 {
     max-width: none;
     padding: 0;
-    margin: 0 0 50px 0;
+    margin: 0 0 43px 0;
     text-align: center;
   }
 
-  @include vp-1199 {
+  @include vp-767 {
     margin-bottom: 40px;
     text-align: left;
   }
@@ -47,7 +47,7 @@
 
   @include vp-1199 {
     max-width: 480px;
-    margin: 0 auto 6px auto;
+    margin: 0 auto 7px auto;
     font-size: 42px;
     line-height: 42px;
   }
@@ -69,7 +69,7 @@
 
   @include vp-1199 {
     max-width: 480px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 39px auto;
   }
 
   @include vp-767 {
@@ -120,7 +120,7 @@
 }
 
 .gym__image-wrapper {
-  margin-bottom: 115px;
+  margin-bottom: 83px;
 
   @include vp-767 {
     margin: 0 -15px 40px -15px;
@@ -142,9 +142,9 @@
 
 .gym__video-wrapper {
   width: 364px;
-  height: 251px;
+  height: 226px;
   position: absolute;
-  top: 265px;
+  top: 289px;
   left: -63px;
 
   @include vp-1199 {
@@ -198,8 +198,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  //width: 100%;
-  //height: 100%;
+  width: 100%;
+  height: 100%;
   border: none;
 }
 

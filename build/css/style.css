@@ -978,7 +978,7 @@ button,
 }
 @media (max-width: 1199px) {
   .gym {
-    padding: 100px 0;
+    padding: 105px 0;
   }
 }
 @media (max-width: 767px) {
@@ -1012,11 +1012,11 @@ button,
   .gym__info {
     max-width: none;
     padding: 0;
-    margin: 0 0 50px 0;
+    margin: 0 0 43px 0;
     text-align: center;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .gym__info {
     margin-bottom: 40px;
     text-align: left;
@@ -1034,7 +1034,7 @@ button,
 @media (max-width: 1199px) {
   .gym__info h2 {
     max-width: 480px;
-    margin: 0 auto 6px auto;
+    margin: 0 auto 7px auto;
     font-size: 42px;
     line-height: 42px;
   }
@@ -1058,7 +1058,7 @@ button,
 @media (max-width: 1199px) {
   .gym__info span {
     max-width: 480px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 39px auto;
   }
 }
 @media (max-width: 767px) {
@@ -1124,7 +1124,7 @@ button,
 }
 
 .gym__image-wrapper {
-  margin-bottom: 115px;
+  margin-bottom: 83px;
 }
 @media (max-width: 767px) {
   .gym__image-wrapper {
@@ -1147,9 +1147,9 @@ button,
 
 .gym__video-wrapper {
   width: 364px;
-  height: 251px;
+  height: 226px;
   position: absolute;
-  top: 265px;
+  top: 289px;
   left: -63px;
 }
 @media (max-width: 1199px) {
@@ -1208,6 +1208,8 @@ button,
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
 }
 
