@@ -21,11 +21,13 @@ $color-crimson:                     #d10a42;
 $color-ghost-white:                 #f8f9fc;
 $color-egyptian-blue:               #103aae;
 $color-whisper:                     #e8e8e8;
+$color-chambray:                    #495a7d;
 
 // Gradient
 
 $red-blue-conic:                    conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg, #003D85 360deg);
-$red-blue-linear:                   linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+$red-blue-linear-diagonal:          linear-gradient(-151deg, #ED0233 0%, #003EB7 100%);
+$red-blue-linear-left-to-right:     linear-gradient(90deg, #ED0233 0%, #003EB7 100%);
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography

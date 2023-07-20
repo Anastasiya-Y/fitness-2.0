@@ -1,20 +1,34 @@
 .subscription {
   text-align: center;
   background-color: $color-ghost-white;
-  padding: 120px 0;
+  padding: 128px 0;
+
+  @include vp-1199 {
+    padding: 105px 0;
+  }
+
+  @include vp-767 {
+    padding: 67px 0;
+  }
+}
+
+.subscription__wrapper {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1366px;
 }
 
 .subscription h2 {
   font-family: $ff-alumni-sans;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 54px;
   line-height: 46px;
-  margin: 0 0 17px 0;
+  margin: 0 0 14px 0;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
     max-width: 480px;
-    margin: 0 auto 7px auto;
+    margin: 0 auto 8px auto;
     font-size: 42px;
     line-height: 42px;
   }
@@ -23,7 +37,7 @@
     font-size: 32px;
     line-height: 32px;
     max-width: none;
-    margin: 0 0 20px 0;
+    margin: 0 0 7px 0;
   }
 }
 
@@ -31,7 +45,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto 39px auto;
+  margin: 0 auto 37px auto;
   padding: 0;
   list-style-type: none;
   position: relative;
@@ -44,8 +58,16 @@
     width: calc(100% - 20px);
     height: 2px;
 
-    background-color: rgba($color-grey, 0.2);
+    background-color: rgba($color-sapphire, 0.2);
     z-index: 1;
+  }
+
+  @include vp-1199 {
+    margin: 0 auto 43px auto;
+  }
+
+  @include vp-767 {
+    margin-bottom: 31px;
   }
 }
 
@@ -53,16 +75,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
   color: rgba($color-sapphire, 0.5);
   text-transform: none;
   border: none;
   cursor: pointer;
-  padding: 20px 10px;
+  padding: 17px 10px;
   background-color: $color-transparent;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 2px;
+    display: none;
+
+    background-color: $color-crimson;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-sapphire;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: rgba($color-sapphire, 0.3)
+  }
 }
 
 .subscription__control:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 28px;
+
+  @include vp-767 {
+    margin-right: 16px;
+  }
 }
 
 .subscription__control.is-active {
@@ -85,6 +147,8 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
 .subscription__list {
@@ -94,28 +158,78 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
 }
 
 .subscription__item {
-  padding: 68px 77px;
+  padding: 56px 40px;
+  min-width: 360px;
   background-color: $color-default-white;
+  border: 7px solid $color-transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    border-image: $red-blue-linear-left-to-right;
+    border-image-slice: 1;
+  }
+
+  @include vp-1199 {
+    min-width: 442px;
+    padding: 64px 40px 67px 40px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    padding: 49px 42px;
+  }
 }
 
 .subscription__item h3 {
-  margin: 0 0 22px 0;
+  margin: 0 0 13px 0;
   font-size: 26px;
   line-height: 26px;
+
+  @include vp-1199 {
+    margin-bottom: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 7px;
+  }
 }
 
 .subscription__item p {
-  margin: 0 0 96px 0;
+  margin: 0 0 80px 0;
   font-weight: 400;
+
+  @include vp-767 {
+    margin-bottom: 66px;
+    color: $color-chambray;
+  }
+}
+
+.subscription__price {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
 }
 
 .subscription__item span {
-  display: block;
   position: relative;
-  margin-bottom: 59px;
+  margin-right: 44px;
   font-family: $ff-roboto-condensed;
   font-size: 60px;
   line-height: 60px;
@@ -126,7 +240,7 @@
   &::before {
     content: attr(data-price);
     position: absolute;
-    bottom: 10px;
+    bottom: 4px;
     left: -19px;
     font-size: 100px;
     line-height: 100px;
@@ -134,21 +248,96 @@
     z-index: -1;
   }
 
-  &::after {
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 48px;
+
+    &::before {
+      bottom: -4px;
+      left: -14px;
+      font-size: 79px;
+      line-height: 79px;
+    }
+
+  }
+}
+
+.subscription__item span:last-of-type {
+  position: relative;
+  margin: 0;
+  display: block;
+
+  &:before {
     content: "₽";
     position: absolute;
     top: 0;
-    right: -42px;
+    left: -30px;
     font-family: $ff-rouble;
     font-size: 60px;
     line-height: 48px;
     font-weight: 600;
     color: $color-sapphire;
   }
+
+  @include vp-767 {
+
+    &::before {
+      font-size: 43px;
+      line-height: 38px;
+    }
+
+  }
 }
 
 .subscription__link {
   display: flex;
+  margin-top: 49px;
   color: $color-sapphire;
-  border: 2px solid $color-sapphire;
+  width: 206px;
+  padding: 19px 10px;
+
+  @include vp-1199 {
+    min-width: 208px;
+  }
 }
+
+.subscription__image-wrapper {
+  position: absolute;
+  bottom: -277px;
+  right: 0;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.subscription__image-wrapper img {
+
+  @include vp-1199 {
+    width: 289px;
+    height: 345px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+/*.subscription__image-wrapper img {
+  position: absolute;
+  bottom: -150px;
+  right: -3px;
+  transform: rotate(360deg);
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+/*.subscription__image-wrapper img {
+  margin-top: 1px;
+  margin-right: 2px;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  position: absolute;
+}*/
