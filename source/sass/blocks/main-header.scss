@@ -25,6 +25,27 @@
   display: flex;
   padding: 9px 0;
   margin-right: 10px;
+
+  &:hover img,
+  &:focus img {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    color: $color-grey;
+  }
+
+  @include vp-767 {
+    padding: 6px 0;
+  }
 }
 
 .main-header__logo img {
@@ -34,8 +55,8 @@
   }
 
   @include vp-767 {
-    width: 69px;
-    height: 12px;
+    width: 67px;
+    height: 13px;
   }
 }
 
@@ -49,13 +70,33 @@
   padding: 3px 0;
   letter-spacing: 0.048em;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
   @include vp-1199 {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 23px;
+    letter-spacing: 0.039em;
+    line-height: 23px;
+    padding: 6px 0;
   }
 
   @include vp-767 {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 19px;
+    line-height: 19px;
+    padding: 4px 0;
   }
 }
