@@ -2,20 +2,45 @@
   text-align: center;
   background-color: $color-ghost-white;
   padding: 128px 0;
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -92px;
+    right: -109px;
+    background-image: url("../img/background/weights.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 321px;
+    height: 384px;
+    z-index: 1;
+    transform: rotate(150deg);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background/weights@2x.png");
+    }
+  }
 
   @include vp-1199 {
     padding: 105px 0;
+
+    &::before {
+      width: 289px;
+      height: 345px;
+      bottom: -216px;
+      right: -10px;
+    }
   }
 
   @include vp-767 {
     padding: 67px 0;
-  }
-}
 
-.subscription__wrapper {
-  margin: 0 auto;
-  position: relative;
-  max-width: 1366px;
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .subscription h2 {

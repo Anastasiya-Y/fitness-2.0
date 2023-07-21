@@ -1832,22 +1832,47 @@ button,
   text-align: center;
   background-color: #f8f9fc;
   padding: 128px 0;
+  position: relative;
+  overflow-x: hidden;
+}
+.subscription::before {
+  content: "";
+  position: absolute;
+  bottom: -92px;
+  right: -109px;
+  background-image: url("../img/background/weights.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 321px;
+  height: 384px;
+  z-index: 1;
+  -webkit-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .subscription::before {
+    background-image: url("../img/background/weights@2x.png");
+  }
 }
 @media (max-width: 1199px) {
   .subscription {
     padding: 105px 0;
+  }
+  .subscription::before {
+    width: 289px;
+    height: 345px;
+    bottom: -216px;
+    right: -10px;
   }
 }
 @media (max-width: 767px) {
   .subscription {
     padding: 67px 0;
   }
-}
-
-.subscription__wrapper {
-  margin: 0 auto;
-  position: relative;
-  max-width: 1366px;
+  .subscription::before {
+    display: none;
+  }
 }
 
 .subscription h2 {
@@ -2108,7 +2133,7 @@ button,
   left: -19px;
   font-size: 100px;
   line-height: 100px;
-  color: #050404;
+  color: #e8e8e8;
   z-index: -1;
 }
 @media (max-width: 767px) {
