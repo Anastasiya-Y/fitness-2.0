@@ -3,23 +3,21 @@
   background-color: $color-ghost-white;
   padding: 128px 0;
   position: relative;
-  overflow-x: hidden;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: -92px;
-    right: -109px;
-    background-image: url("../img/background/weights.png");
+    bottom: -143px;
+    right: 0;
+    background-image: url("../img/background/weights-desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 321px;
-    height: 384px;
+    width: 287px;
+    height: 487px;
     z-index: 1;
-    transform: rotate(150deg);
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background/weights@2x.png");
+      background-image: url("../img/background/weights-desktop@2x.png");
     }
   }
 
@@ -27,10 +25,15 @@
     padding: 105px 0;
 
     &::before {
-      width: 289px;
-      height: 345px;
-      bottom: -216px;
-      right: -10px;
+      width: 347px;
+      height: 383px;
+      bottom: -56px;
+      right: 0;
+      background-image: url("../img/background/weights-tablet.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/background/weights-tablet@2x.png");
+      }
     }
   }
 
@@ -42,6 +45,7 @@
     }
   }
 }
+
 
 .subscription h2 {
   font-family: $ff-alumni-sans;
@@ -197,7 +201,7 @@
   padding: 56px 40px;
   min-width: 360px;
   background-color: $color-default-white;
-  border: 7px solid $color-transparent;
+  border: 7px solid $color-default-white;
   display: flex;
   flex-direction: column;
   align-items: center;

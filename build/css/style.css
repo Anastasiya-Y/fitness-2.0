@@ -1833,26 +1833,22 @@ button,
   background-color: #f8f9fc;
   padding: 128px 0;
   position: relative;
-  overflow-x: hidden;
 }
 .subscription::before {
   content: "";
   position: absolute;
-  bottom: -92px;
-  right: -109px;
-  background-image: url("../img/background/weights.png");
+  bottom: -143px;
+  right: 0;
+  background-image: url("../img/background/weights-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 321px;
-  height: 384px;
+  width: 287px;
+  height: 487px;
   z-index: 1;
-  -webkit-transform: rotate(150deg);
-      -ms-transform: rotate(150deg);
-          transform: rotate(150deg);
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .subscription::before {
-    background-image: url("../img/background/weights@2x.png");
+    background-image: url("../img/background/weights-desktop@2x.png");
   }
 }
 @media (max-width: 1199px) {
@@ -1860,10 +1856,16 @@ button,
     padding: 105px 0;
   }
   .subscription::before {
-    width: 289px;
-    height: 345px;
-    bottom: -216px;
-    right: -10px;
+    width: 347px;
+    height: 383px;
+    bottom: -56px;
+    right: 0;
+    background-image: url("../img/background/weights-tablet.png");
+  }
+}
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .subscription::before {
+    background-image: url("../img/background/weights-tablet@2x.png");
   }
 }
 @media (max-width: 767px) {
@@ -2044,7 +2046,7 @@ button,
   padding: 56px 40px;
   min-width: 360px;
   background-color: #ffffff;
-  border: 7px solid rgba(255, 255, 255, 0);
+  border: 7px solid #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
