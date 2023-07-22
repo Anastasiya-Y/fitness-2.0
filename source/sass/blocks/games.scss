@@ -16,6 +16,7 @@
   line-height: 18px;
   display: grid;
   grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, min-content) auto repeat(2, min-content) auto auto;
   grid-template-areas:
     "title date-label date-label"
     "title day month"

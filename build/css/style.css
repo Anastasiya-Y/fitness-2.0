@@ -1044,6 +1044,10 @@ button,
   display: grid;
   -ms-grid-columns: (auto)[3];
   grid-template-columns: repeat(3, auto);
+  -ms-grid-rows: (-webkit-min-content)[3] auto (-webkit-min-content)[2] auto auto;
+  -ms-grid-rows: (min-content)[3] auto (min-content)[2] auto auto;
+  grid-template-rows: repeat(3, -webkit-min-content) auto repeat(2, -webkit-min-content) auto auto;
+  grid-template-rows: repeat(3, min-content) auto repeat(2, min-content) auto auto;
       grid-template-areas: "title date-label date-label" "title day month" "title day year" "title time-label time-label" "title time time" "description description description" "link link link";
   -webkit-box-align: center;
       -ms-flex-align: center;
