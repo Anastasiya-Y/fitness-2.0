@@ -1,0 +1,108 @@
+.games {
+  padding: 120px 0 106px 0;
+}
+
+.games__wrapper {
+  display: grid;
+  grid-template-columns: 500px 660px;
+}
+
+.games__info {
+  background-color: $color-torch-red;
+  padding: 85px 79px 87px 78px;
+  color: $color-default-white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas:
+    "title date-label date-label"
+    "title day month"
+    "title day year"
+    "title time-label time-label"
+    "title time time"
+    "description description description"
+    "link link link";
+  align-items: center;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.games__info h2 {
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 76px;
+  margin: 0;
+  text-transform: uppercase;
+  grid-area: title;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.games__date-label {
+  grid-area: date-label;
+}
+
+.games__day,
+.games__time {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.games__day {
+  grid-area: day;
+}
+
+.games__month,
+.games__year {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.games__month {
+  grid-area: month;
+}
+
+.games__year {
+  grid-area: year;
+}
+
+.games__time-label {
+  grid-area: time-label;
+}
+
+.games__time {
+  grid-area: time;
+}
+
+.games__info p {
+  margin: 0;
+  grid-area: description;
+}
+
+.games__link {
+  grid-area: link;
+}
+
+.games__image-wrapper img {
+
+  @include vp-1199 {
+    width: 386px;
+    height: 292px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 292px;
+  }
+}

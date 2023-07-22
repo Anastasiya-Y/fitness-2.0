@@ -595,11 +595,11 @@ button,
   transition: opacity 0.3s ease;
 }
 .btn--red {
-  background-color: #ff1553;
+  background-color: #ed0233;
 }
 .btn:hover, .btn:focus {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ED0233), to(#003EB7));
-  background-image: linear-gradient(90deg, #ED0233 0%, #003EB7 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
+  background-image: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #ffffff;
@@ -1022,6 +1022,141 @@ button,
   opacity: 1;
 }
 
+.games {
+  padding: 120px 0 106px 0;
+}
+
+.games__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 500px 660px;
+  grid-template-columns: 500px 660px;
+}
+
+.games__info {
+  background-color: #ed0233;
+  padding: 85px 79px 87px 78px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
+      grid-template-areas: "title date-label date-label" "title day month" "title day year" "title time-label time-label" "title time time" "description description description" "link link link";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1199px) {
+  .games__info {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.games__info h2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 76px;
+  margin: 0;
+  text-transform: uppercase;
+  grid-area: title;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 1199px) {
+  .games__info h2 {
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.games__date-label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: date-label;
+}
+
+.games__day,
+.games__time {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.games__day {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: day;
+}
+
+.games__month,
+.games__year {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.games__month {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: month;
+}
+
+.games__year {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: year;
+}
+
+.games__time-label {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: time-label;
+}
+
+.games__time {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: time;
+}
+
+.games__info p {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  margin: 0;
+  grid-area: description;
+}
+
+.games__link {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: link;
+}
+
+@media (max-width: 1199px) {
+  .games__image-wrapper img {
+    width: 386px;
+    height: 292px;
+  }
+}
+@media (max-width: 767px) {
+  .games__image-wrapper img {
+    width: 290px;
+    height: 292px;
+  }
+}
+
 .gym {
   padding: 120px 0 154px 0;
 }
@@ -1301,7 +1436,7 @@ button,
   border-radius: 50%;
   width: 72px;
   height: 72px;
-  background-image: linear-gradient(-151deg, #ED0233 0%, #003EB7 100%);
+  background-image: linear-gradient(-151deg, #ed0233 0%, #003eb7 100%);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -1646,7 +1781,7 @@ button,
 
 .promo {
   padding: 51px 0;
-  background-image: conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.2363382578deg, #B80027 313.3060026169deg, #003D85 360deg);
+  background-image: conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.2363382578deg, #b80027 313.3060026169deg, #003d85 360deg);
 }
 @media (max-width: 1199px) {
   .promo {
@@ -2132,9 +2267,9 @@ button,
           align-items: center;
 }
 .subscription__item:hover, .subscription__item:focus {
-  -o-border-image: linear-gradient(90deg, #ED0233 0%, #003EB7 100%);
-     border-image: -webkit-gradient(linear, left top, right top, from(#ED0233), to(#003EB7));
-     border-image: linear-gradient(90deg, #ED0233 0%, #003EB7 100%);
+  -o-border-image: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
+     border-image: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
+     border-image: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
   border-image-slice: 1;
 }
 @media (max-width: 1199px) {

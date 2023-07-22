@@ -10,9 +10,6 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
-
 $color-sapphire:                    #102654;
 $color-black-russian:               #030a1a;
 $color-dark-cerulean:               #14367a;
@@ -22,12 +19,13 @@ $color-ghost-white:                 #f8f9fc;
 $color-egyptian-blue:               #103aae;
 $color-whisper:                     #e8e8e8;
 $color-chambray:                    #495a7d;
+$color-torch-red:                   #ed0233;
 
 // Gradient
 
-$red-blue-conic:                    conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg, #003D85 360deg);
-$red-blue-linear-diagonal:          linear-gradient(-151deg, #ED0233 0%, #003EB7 100%);
-$red-blue-linear-left-to-right:     linear-gradient(90deg, #ED0233 0%, #003EB7 100%);
+$red-blue-conic:                    conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.23633825778961deg, #b80027 313.3060026168823deg, #003d85 360deg);
+$red-blue-linear-diagonal:          linear-gradient(-151deg, #ed0233 0%, #003eb7 100%);
+$red-blue-linear-left-to-right:     linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
