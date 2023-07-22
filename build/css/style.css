@@ -1023,7 +1023,7 @@ button,
 }
 
 .gym {
-  padding: 120px 0;
+  padding: 120px 0 154px 0;
 }
 @media (max-width: 1199px) {
   .gym {
@@ -1303,20 +1303,63 @@ button,
   height: 72px;
   background-image: linear-gradient(-151deg, #ED0233 0%, #003EB7 100%);
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .gym__video-button::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 42px;
+  left: 46px;
   width: 13px;
   height: 15px;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
           clip-path: polygon(0 0, 0% 100%, 100% 50%);
   background-color: #ffffff;
+}
+.gym__video-button:hover, .gym__video-button:focus {
+  background-image: none;
+  border: 2px solid #102654;
+}
+.gym__video-button:hover::before, .gym__video-button:focus::before {
+  background-image: none;
+  background-color: #ffffff;
+}
+.gym__video-button:hover::after, .gym__video-button:focus::after {
+  background-color: #102654;
+  top: 40px;
+  left: 44px;
+}
+.gym__video-button:focus-visible {
+  outline: none;
+}
+.gym__video-button:active {
+  background-image: none;
+  border: 2px solid #102654;
+}
+.gym__video-button:active::before {
+  background-image: none;
+  background-color: #ffffff;
+  width: 58px;
+  height: 58px;
+}
+.gym__video-button:active::after {
+  background-color: #102654;
+  top: 40px;
+  left: 44px;
+}
+.gym__video-button:disabled {
+  background-image: none;
+  border: 2px solid rgba(16, 38, 84, 0.4);
+  pointer-events: none;
+}
+.gym__video-button:disabled::before {
+  background-image: none;
+  background-color: #ffffff;
+}
+.gym__video-button:disabled::after {
+  background-color: rgba(16, 38, 84, 0.4);
+  top: 40px;
+  left: 44px;
 }
 @media (max-width: 1199px) {
   .gym__video-button {
@@ -1328,8 +1371,26 @@ button,
     height: 52px;
   }
   .gym__video-button::after {
+    top: 31px;
+    left: 33px;
     width: 9px;
     height: 10px;
+  }
+  .gym__video-button:hover::after, .gym__video-button:focus::after {
+    top: 29px;
+    left: 31px;
+  }
+  .gym__video-button:active::before {
+    width: 31px;
+    height: 31px;
+  }
+  .gym__video-button:active::after {
+    top: 29px;
+    left: 31px;
+  }
+  .gym__video-button:disabled::after {
+    top: 29px;
+    left: 31px;
   }
 }
 

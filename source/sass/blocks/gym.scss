@@ -1,5 +1,5 @@
 .gym {
-  padding: 120px 0;
+  padding: 120px 0 154px 0;
 
   @include vp-1199 {
     padding: 105px 0;
@@ -240,19 +240,75 @@
 
     background-image: $red-blue-linear-diagonal;
     background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 42px;
+    left: 46px;
     width: 13px;
     height: 15px;
     clip-path: polygon(0 0, 0% 100%, 100% 50%);
 
     background-color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-image: none;
+    border: 2px solid $color-sapphire;
+
+    &::before {
+      background-image: none;
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-sapphire;
+      top: 40px;
+      left: 44px;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    background-image: none;
+    border: 2px solid $color-sapphire;
+
+    &::before {
+      background-image: none;
+      background-color: $color-default-white;
+      width: 58px;
+      height: 58px;
+    }
+
+    &::after {
+      background-color: $color-sapphire;
+      top: 40px;
+      left: 44px;
+    }
+  }
+
+  &:disabled {
+    background-image: none;
+    border: 2px solid rgba($color-sapphire, 0.4);
+    pointer-events: none;
+
+    &::before {
+      background-image: none;
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: rgba($color-sapphire, 0.4);
+      top: 40px;
+      left: 44px;
+    }
   }
 
   @include vp-1199 {
@@ -265,8 +321,39 @@
     }
 
     &::after {
+      top: 31px;
+      left: 33px;
       width: 9px;
       height: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        top: 29px;
+        left: 31px;
+      }
+    }
+
+    &:active {
+
+      &::before {
+        width: 31px;
+        height: 31px;
+      }
+
+      &::after {
+        top: 29px;
+        left: 31px;
+      }
+    }
+
+    &:disabled {
+
+      &::after {
+        top: 29px;
+        left: 31px;
+      }
     }
   }
 }
