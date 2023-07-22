@@ -135,8 +135,8 @@
   }
 
   @include vp-767 {
-    width: 320px;
-    height: 313px;
+    width: 100vw;
+    height: 100%;
   }
 }
 
@@ -157,10 +157,12 @@
   }
 
   @include vp-767 {
-    width: calc(100vw + 30px);
-    height: auto;
-    position: static;
-    transform: translateX(-15px);
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -191,6 +193,7 @@
 
   @include vp-767 {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -201,6 +204,10 @@
   width: 100%;
   height: 100%;
   border: none;
+
+  @include vp-767 {
+    position: static;
+  }
 }
 
 .gym__video-button {
