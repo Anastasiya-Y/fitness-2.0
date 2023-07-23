@@ -20,8 +20,13 @@
     background-color: $color-torch-red;
   }
 
-  &:hover,
-  &:focus {
+  @include hover {
+    background-image: $red-blue-linear-left-to-right;
+    box-shadow: none;
+    color: $color-default-white;
+  }
+
+  @include focus {
     background-image: $red-blue-linear-left-to-right;
     box-shadow: none;
     color: $color-default-white;
@@ -31,8 +36,9 @@
     outline: none;
   }
 
-  &:active {
+  @include active-not-focus-visible {
     color: rgba($color-default-white, 0.7);
+    background-color: $color-default-white;
   }
 
   &:disabled {

@@ -255,8 +255,23 @@
     background-color: $color-default-white;
   }
 
-  &:hover,
-  &:focus {
+  @include hover {
+    background-image: none;
+    border: 2px solid $color-sapphire;
+
+    &::before {
+      background-image: none;
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-sapphire;
+      top: 40px;
+      left: 44px;
+    }
+  }
+
+  @include focus {
     background-image: none;
     border: 2px solid $color-sapphire;
 
@@ -276,7 +291,7 @@
     outline: none;
   }
 
-  &:active {
+  @include active-not-focus-visible {
     background-image: none;
     border: 2px solid $color-sapphire;
 
@@ -327,16 +342,20 @@
       height: 10px;
     }
 
-    &:hover,
-    &:focus {
+    @include hover {
       &::after {
         top: 29px;
         left: 31px;
       }
     }
 
-    &:active {
-
+    @include focus {
+      &::after {
+        top: 29px;
+        left: 31px;
+      }
+    }
+    @include active-not-focus-visible {
       &::before {
         width: 31px;
         height: 31px;

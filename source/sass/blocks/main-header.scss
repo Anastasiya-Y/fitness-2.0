@@ -26,16 +26,23 @@
   padding: 9px 0;
   margin-right: 10px;
 
-  &:hover img,
-  &:focus img {
-    opacity: 0.8;
+  @include hover {
+    & img {
+      opacity: 0.8;
+    }
+  }
+
+  @include focus {
+    & img {
+      opacity: 0.8;
+    }
   }
 
   &:focus-visible {
     outline: none;
   }
 
-  &:active {
+  @include active-not-focus-visible {
     opacity: 0.5;
   }
 
@@ -70,8 +77,11 @@
   padding: 3px 0;
   letter-spacing: 0.048em;
 
-  &:hover,
-  &:focus {
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
     opacity: 0.8;
   }
 
@@ -79,12 +89,13 @@
     outline: none;
   }
 
-  &:active {
+  @include active-not-focus-visible {
     opacity: 0.5;
   }
 
   &:disabled {
     pointer-events: none;
+    color: $color-grey;
   }
 
   @include vp-1199 {

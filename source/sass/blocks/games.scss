@@ -1,22 +1,35 @@
 .games {
   padding: 120px 0 106px 0;
+
+  @include vp-1199 {
+    padding: 100px 0 106px 0;
+  }
+
+  @include vp-767 {
+    padding: 70px 0 63px 0;
+  }
 }
 
 .games__wrapper {
   display: grid;
-  grid-template-columns: 500px 660px;
+  grid-template-columns: repeat(2, auto);
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .games__info {
   background-color: $color-torch-red;
-  padding: 85px 79px 87px 78px;
+  padding: 86px 78px 85px 78px;
   color: $color-default-white;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, min-content) auto repeat(2, min-content) auto auto;
+  grid-template-columns: auto 27px auto;
+  grid-template-rows: repeat(5, min-content) repeat(2, auto);
   grid-template-areas:
     "title date-label date-label"
     "title day month"
@@ -25,11 +38,17 @@
     "title time time"
     "description description description"
     "link link link";
-  align-items: center;
+  align-items: start;
 
   @include vp-1199 {
     font-size: 12px;
     line-height: 18px;
+    padding: 51px 45px 49px 45px;
+    grid-template-columns: auto 16px auto;
+  }
+
+  @include vp-767 {
+    padding: 50px 43px 50px 43px;
   }
 }
 
@@ -37,8 +56,8 @@
   font-family: $ff-alumni-sans;
   font-weight: 600;
   font-size: 82px;
-  line-height: 76px;
-  margin: 0;
+  line-height: 79px;
+  margin: 0 58px 0 13px;
   text-transform: uppercase;
   grid-area: title;
   letter-spacing: 0.03em;
@@ -46,32 +65,89 @@
   @include vp-1199 {
     font-size: 48px;
     line-height: 46px;
+    margin: 0 33px 0 8px;
+  }
+
+  @include vp-767 {
+    margin: 0 32px 0 8px;
+  }
+}
+
+.games__date-label,
+.games__time-label {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    line-height: 46px;
   }
 }
 
 .games__date-label {
   grid-area: date-label;
+  line-height: 11px;
+
+  &::before {
+    width: 64px;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 2px;
+
+    &::before {
+      bottom: -5px;
+      width: 42px;
+    }
+  }
+
+  @include vp-767 {
+    margin: 1px 0 2px 0;
+  }
 }
 
 .games__day,
 .games__time {
   font-weight: 700;
   font-size: 40px;
-  line-height: 60px;
+
+  @include vp-1199 {
+    font-size: 24px;
+  }
 }
 
 .games__day {
   grid-area: day;
+  line-height: 67px;
+
+  @include vp-1199 {
+    line-height: 36px;
+  }
 }
 
 .games__month,
 .games__year {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 .games__month {
   grid-area: month;
+  align-self: end;
 }
 
 .games__year {
@@ -80,30 +156,81 @@
 
 .games__time-label {
   grid-area: time-label;
+  margin-top: 10px;
+
+  &::before {
+    width: 87px;
+  }
+
+  @include vp-1199 {
+    margin: 0;
+    line-height: 18px;
+
+    &::before {
+      width: 56px;
+      bottom: -2px;
+    }
+  }
 }
 
 .games__time {
   grid-area: time;
+  line-height: 66px;
+
+  @include vp-1199 {
+    line-height: 32px;
+  }
 }
 
 .games__info p {
-  margin: 0;
+  margin: 12px 0 46px 0;
   grid-area: description;
+
+  @include vp-1199 {
+    margin: 3px 0 30px;
+  }
 }
 
 .games__link {
   grid-area: link;
+  line-height: 14px;
+  box-shadow: inset 0px 0px 0px 4px $color-default-white;
+  padding: 28px 20px;
+
+  @include hover {
+    background-color: $color-default-white;
+    background-image: none;
+    color: $color-egyptian-blue;
+  }
+
+  @include focus {
+    background-color: $color-default-white;
+    background-image: none;
+    color: $color-egyptian-blue;
+  }
+
+  @include active-not-focus-visible {
+    color: $color-sapphire;
+    background-image: none;
+    background-color: $color-default-white;
+  }
+
+  @include vp-1199 {
+    box-shadow: inset 0px 0px 0px 2px $color-default-white;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 15px 20px;
+  }
+
+  @include vp-767 {
+    padding: 15px 20px 14px 20px;
+  }
 }
 
 .games__image-wrapper img {
 
   @include vp-1199 {
-    width: 386px;
-    height: 292px;
-  }
-
-  @include vp-767 {
-    width: 290px;
-    height: 292px;
+    width: 100%;
+    height: 100%;
   }
 }
