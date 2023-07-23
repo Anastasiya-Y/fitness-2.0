@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initVideo} from './modules/init-video';
 import {initTabs} from './modules/tabs/init-tabs';
+import {initSwiperTrainers} from './modules/init-swiper';
+
 
 // ---------------------------------
 
@@ -24,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     initVideo();
     initTabs();
+    initSwiperTrainers();
     form.init();
   });
 });
