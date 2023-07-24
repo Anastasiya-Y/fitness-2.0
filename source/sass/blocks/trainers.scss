@@ -1,5 +1,13 @@
 .trainers {
   padding: 0 0 105px 0;
+
+  @include vp-1199 {
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
 }
 
 .trainers h2 {
@@ -34,9 +42,13 @@
   width: 1160px;
   overflow: hidden;
 
+  @include vp-1339 {
+    width: 860px;
+    margin: 0 auto;
+  }
+
   @include vp-1199 {
     width: 566px;
-    margin: 0 auto;
   }
 
   @include vp-767 {
@@ -276,6 +288,10 @@
 .trainers__button--prev {
   left: -74px;
 
+  @include vp-1339 {
+    left: 0;
+  }
+
   @include vp-1199 {
     left: -18px;
   }
@@ -287,6 +303,10 @@
 
 .trainers__button--next {
   right: -78px;
+
+  @include vp-1339 {
+    right: 0;
+  }
 
   @include vp-1199 {
     right: -18px;

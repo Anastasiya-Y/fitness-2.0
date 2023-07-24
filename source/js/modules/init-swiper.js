@@ -19,9 +19,14 @@ const initSwiperTrainers = () => {
         spaceBetween: 30,
       },
       1200: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1340: {
         slidesPerView: 4,
         spaceBetween: 40,
       },
+
     },
   });
 };
