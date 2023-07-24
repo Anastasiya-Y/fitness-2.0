@@ -1,4 +1,4 @@
-const swiperContainerTrainers = document.querySelector('.trainers__container');
+const swiperContainerTrainers = document.querySelector('.swiper-container');
 
 const initSwiperTrainers = () => {
   const swiper = new Swiper(swiperContainerTrainers, {
@@ -8,15 +8,15 @@ const initSwiperTrainers = () => {
     },
     grabCursor: true,
     loop: true,
+    loopedSlides: 4,
     breakpoints: {
       320: {
         slidesPerView: 1,
-        initialSlide: 3,
+        spaceBetween: 0,
       },
       768: {
         slidesPerView: 2,
         spaceBetween: 30,
-        initialSlide: 3,
       },
       1200: {
         slidesPerView: 4,

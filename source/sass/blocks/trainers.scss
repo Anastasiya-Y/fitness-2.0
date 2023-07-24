@@ -7,7 +7,8 @@
   font-weight: 600;
   font-size: 54px;
   line-height: 54px;
-  margin: 0 0 48px 0;
+  margin: 0 0 53px 0;
+  letter-spacing: 0.036em;
 
   @include vp-1199 {
     text-align: center;
@@ -25,20 +26,27 @@
   }
 }
 
-.trainers__container {
+.trainers__content-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
-.trainers__wrapper {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.trainers__container {
+  width: 1160px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: 566px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 224px;
+  }
 }
 
 .trainers__slide {
-  min-width: 260px;
-  min-height: 294px;
+  width: 260px;
+  height: 294px;
   position: relative;
 
   @include hover {
@@ -71,6 +79,47 @@
       transform: none;
     }
   }
+
+  @include vp-1199 {
+    width: 268px;
+    height: 294px;
+
+    @include active-not-focus-visible {
+
+      .trainers__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+
+          background-color: rgba($color-sapphire, 0.89);
+        }
+      }
+
+      .trainers__info-wrapper {
+        display: block;
+      }
+
+      .trainers__info h3 {
+        position: static;
+        transform: none;
+      }
+    }
+  }
+
+  @include vp-767 {
+    width: 224px;
+    height: 274px;
+  }
 }
 
 .trainers__info {
@@ -80,9 +129,15 @@
   width: 100%;
   height: 100%;
   padding: 55px 38px 20px 54px;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+
+  @include vp-1199 {
+    padding-left: 55px;
+  }
+
+  @include vp-767 {
+    padding: 45px 27px 20px 33px;
+  }
 }
 
 .trainers__info h3 {
@@ -93,9 +148,18 @@
   position: absolute;
   color: $color-default-white;
   font-weight: 700;
-  top: 251px;
+  top: 249px;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-52%);
+
+  @include vp-1199 {
+    margin-left: 2px;
+  }
+
+  @include vp-767 {
+    margin-left: 6px;
+    top: 225px;
+  }
 }
 
 .trainers__info-wrapper {
@@ -107,6 +171,14 @@
   color: $color-spindle;
   text-align: left;
   margin: 0 0 33px 50px;
+
+  @include vp-1199 {
+    margin-left: 49px;
+  }
+
+  @include vp-767 {
+    margin-left: 53px;
+  }
 }
 
 .trainers__info-wrapper ul {
@@ -134,40 +206,122 @@
 
     background-color: $color-default-white;
   }
+
+  @include vp-1199 {
+    padding-left: 16px;
+  }
 }
 
 .trainers__info-wrapper li:not(:last-of-type) {
   margin-bottom: 13px;
 }
 
+.trainers__image-wrapper img {
+  object-fit: cover;
+  max-width: none;
+  width: 100%;
+
+  @include vp-767 {
+    width: auto;
+  }
+}
+
 .trainers__button {
   position: absolute;
   z-index: 1;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 56px;
   height: 56px;
 
-  background-color: $color-transparent;
+  background-color: $color-default-white;
+  color: $color-sapphire;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  top: 225px;
 
-  /*@media (min-width: $tablet-width) {
-    width: 80px;
-  }*/
+  @include hover {
+    box-shadow: inset 0px 0px 0px 1px $color-sapphire;
+  }
+
+  @include focus {
+    box-shadow: inset 0px 0px 0px 1px $color-sapphire;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include active-not-focus-visible {
+    color: $color-default-white;
+    background-color: $color-sapphire;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @include vp-1199 {
+    top: 199px;
+  }
+
+  @include vp-767 {
+    width: 33px;
+    height: 33px;
+    top: 197px;
+  }
 }
 
 .trainers__button--prev {
-  top: 50%;
-  left: 0;
-  transform: translate(-50%);
+  left: -74px;
+
+  @include vp-1199 {
+    left: -18px;
+  }
+
+  @include vp-767 {
+    left: -10px;
+  }
 }
 
 .trainers__button--next {
-  top: 50%;
-  right: 0;
-  transform: translate(-50%);
+  right: -78px;
+
+  @include vp-1199 {
+    right: -18px;
+  }
+
+  @include vp-767 {
+    right: -10px;
+  }
+}
+
+.trainers__button svg {
+  position: absolute;
+
+  @include vp-767 {
+    width: 12px;
+    height: 21px;
+  }
+}
+
+.trainers__button--prev svg {
+  top: 12px;
+  left: 17px;
+
+  @include vp-767 {
+    top: 6px;
+    left: 9px;
+  }
+}
+
+.trainers__button--next svg{
+  top: 12px;
+  right: 17px;
+
+  @include vp-767 {
+    top: 6px;
+    right: 9px;
+  }
 }
