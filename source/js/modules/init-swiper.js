@@ -1,7 +1,8 @@
-const swiperContainerTrainers = document.querySelector('.swiper-container');
+const swiperContainerTrainers = document.querySelector('.trainers__container');
+const swiperContainerFeedback = document.querySelector('.feedback__container');
 
-const initSwiperTrainers = () => {
-  const swiper = new Swiper(swiperContainerTrainers, {
+const initSwiper = () => {
+  const swiperTrainers = new Swiper(swiperContainerTrainers, {
     navigation: {
       nextEl: '.trainers__button--next',
       prevEl: '.trainers__button--prev',
@@ -26,10 +27,18 @@ const initSwiperTrainers = () => {
         slidesPerView: 4,
         spaceBetween: 40,
       },
-
     },
+  });
+
+  const swiperFeedback = new Swiper(swiperContainerFeedback, {
+    navigation: {
+      nextEl: '.feedback__button--next',
+      prevEl: '.feedback__button--prev',
+    },
+    grabCursor: true,
+    spaceBetween: 10,
   });
 };
 
-export {initSwiperTrainers};
+export {initSwiper};
 
