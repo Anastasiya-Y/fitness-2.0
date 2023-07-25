@@ -624,17 +624,19 @@
 
               <div class="interaction__form form">
                 <h2>Бесплатное занятие</h2>
-                <form>
-                  <fieldset class="form__fields">
-                    <div class="form__field-wrapper">
-                      <input type="text" name="form-field-name" placeholder="Имя" value="Имя" aria-label="Имя." required>
-                    </div>
-                    <div class="form__field-wrapper">
-                      <input type="tel" name="form-field-tel" placeholder="Телефон" value="Телефон" aria-label="Телефон." required>
-                    </div>
-                  </fieldset>
-                  <button class="form__button btn" type="submit">Отправить</button>
-                </form>
+                <div class="form__container" data-form-validate>
+                  <form action="https://echo.htmlacademy.ru/" method="post">
+                    <fieldset class="form__fields">
+                      <div class="form__field-wrapper" data-validate-type="text" data-limitation="letters" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                        <input type="text" name="form-field-name" placeholder="Имя" minlength="1" aria-label="Имя." required>
+                      </div>
+                      <div class="form__field-wrapper" data-validate-type="phone" data-matrix="_-__-___-__-__" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                        <input type="tel" name="form-field-tel" placeholder="Телефон" aria-label="Телефон." required>
+                      </div>
+                    </fieldset>
+                    <button class="form__button btn" type="submit">Отправить</button>
+                  </form>
+                </div>
               </div>
 
               <div class="interaction__contacts contacts">

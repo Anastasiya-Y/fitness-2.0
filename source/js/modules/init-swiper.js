@@ -37,6 +37,7 @@ const initSwiper = () => {
     },
     grabCursor: true,
     spaceBetween: 10,
+    autoHeight: true,
   });
 };
 
