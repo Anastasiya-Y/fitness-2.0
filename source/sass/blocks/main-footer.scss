@@ -23,6 +23,30 @@
   display: flex;
   align-items: center;
 
+  @include hover {
+    & img {
+      opacity: 0.8;
+    }
+  }
+
+  @include focus {
+    & img {
+      opacity: 0.8;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include active-not-focus-visible {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    color: $color-grey;
+  }
+
   @include vp-1199 {
     margin: -7px 27px 0 0;
   }
@@ -34,7 +58,7 @@
   }
 }
 
-.main-footer__logo img{
+.main-footer__logo img {
   @include vp-1199 {
     width: 80px;
     height: 16px;

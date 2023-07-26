@@ -3583,6 +3583,23 @@ button,
       -ms-flex-align: center;
           align-items: center;
 }
+@media (hover: hover) {
+  .main-footer__logo:hover:not(.focus-visible) img {
+    opacity: 0.8;
+  }
+}
+.main-footer__logo.focus-visible:focus img {
+  opacity: 0.8;
+}
+.main-footer__logo:focus-visible {
+  outline: none;
+}
+.main-footer__logo:active:not(.focus-visible) {
+  opacity: 0.5;
+}
+.main-footer__logo:disabled {
+  color: #787878;
+}
 @media (max-width: 1199px) {
   .main-footer__logo {
     margin: -7px 27px 0 0;
@@ -3735,6 +3752,10 @@ button,
   }
 }
 
+.main-nav {
+  margin: 2px 0 0 2px;
+}
+
 .main-nav__list {
   margin: 0 0 0 7px;
   padding: 2px 0 0 0;
@@ -3795,7 +3816,33 @@ button,
           justify-content: center;
   font-weight: 400;
   font-size: 14px;
+  line-height: 22px;
   text-align: center;
+  position: relative;
+}
+@media (hover: hover) {
+  .main-nav__link:hover:not(.focus-visible)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: #ffffff;
+  }
+}
+.main-nav__link.focus-visible:focus {
+  -webkit-box-shadow: inset 0px 0px 0px 1px #ffffff;
+          box-shadow: inset 0px 0px 0px 1px #ffffff;
+}
+.main-nav__link:focus-visible {
+  outline: none;
+}
+.main-nav__link:active:not(.focus-visible)::before {
+  display: none;
+}
+.main-nav__link:disabled {
+  opacity: 0.4;
 }
 @media (max-width: 767px) {
   .main-nav__link {
@@ -4240,6 +4287,7 @@ button,
 }
 .promotion__link:active:not(.focus-visible) {
   color: #102654;
+  background-color: rgba(255, 255, 255, 0);
   opacity: 1;
 }
 .promotion__link:disabled {
@@ -4359,10 +4407,37 @@ button,
       -ms-flex-align: center;
           align-items: center;
   background-color: #ffffff;
-  padding: 3px;
+  padding: 0;
   min-width: 25px;
   min-height: 25px;
   border-radius: 50%;
+}
+@media (hover: hover) {
+  .social__link:hover:not(.focus-visible) {
+    background-color: #103aae;
+  }
+  .social__link:hover:not(.focus-visible) svg {
+    fill: #ffffff;
+  }
+}
+.social__link.focus-visible:focus {
+  background-color: #103aae;
+}
+.social__link.focus-visible:focus svg {
+  fill: #ffffff;
+}
+.social__link:focus-visible {
+  outline: none;
+}
+.social__link:active:not(.focus-visible) {
+  background-color: #102654;
+}
+.social__link:active:not(.focus-visible) svg {
+  fill: #ffffff;
+}
+.social__link:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .social__link svg {

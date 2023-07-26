@@ -18,10 +18,44 @@
   justify-content: center;
   align-items: center;
   background-color: $color-default-white;
-  padding: 3px;
+  padding: 0;
   min-width: 25px;
   min-height: 25px;
   border-radius: 50%;
+
+  @include hover {
+    background-color: $color-egyptian-blue;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  @include focus {
+    background-color: $color-egyptian-blue;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include active-not-focus-visible {
+    background-color: $color-sapphire;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
 }
 
 .social__link svg {

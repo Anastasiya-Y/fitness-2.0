@@ -180,6 +180,7 @@
 
   @include active-not-focus-visible {
     color: $color-sapphire;
+    background-color: $color-transparent;
     opacity: 1;
   }
 
