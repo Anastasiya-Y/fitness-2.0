@@ -125,6 +125,14 @@
     background-color: $color-crimson;
   }
 
+  &.is-active {
+    color: $color-sapphire;
+
+    &::before {
+      display: block;
+    }
+  }
+
   @include hover {
     color: $color-sapphire;
 
@@ -143,6 +151,14 @@
 
   &:focus-visible {
     outline: none;
+  }
+
+  @include active-not-focus-visible {
+    color: $color-sapphire;
+
+    &::before {
+      display: block;
+    }
   }
 
   &:disabled {

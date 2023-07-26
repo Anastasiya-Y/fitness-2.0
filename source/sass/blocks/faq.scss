@@ -77,6 +77,12 @@
   background-color: $color-transparent;
   box-shadow: inset 0px 0px 0px 1px rgba($color-sapphire, 0.2);
 
+  &.is-active {
+    background-image: $red-blue-linear-left-to-right;
+    box-shadow: none;
+    color: $color-default-white;
+  }
+
   @include vp-1199 {
     min-width: auto;
   }
@@ -98,6 +104,20 @@
 .faq__item {
   padding: 32px 190px 25px 0;
   border-top: 1px solid rgba($color-resolution-blue, 0.2);
+  position: relative;
+
+  &.is-active .faq__accordion-button {
+    background-color: $color-sapphire;
+
+    &::before {
+      transform: translateX(-50%) rotate(90deg);
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
 
   @include vp-1199 {
     padding: 32px 130px 25px 0;
@@ -110,6 +130,83 @@
 
 .faq__item:last-child {
   border-bottom: 1px solid rgba($color-resolution-blue, 0.2);
+}
+
+
+.faq__accordion-button {
+  position: absolute;
+  top: 25px;
+  right: 0;
+
+  width: 42px;
+  height: 42px;
+
+  background-color: $color-default-white;
+  border: 1px solid $color-sapphire;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-color: $color-sapphire;
+  }
+
+  &::before {
+    top: 11px;
+    left: 20px;
+
+    width: 1px;
+    height: 18px;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    top: 20px;
+    left: 11px;
+
+    width: 18px;
+    height: 1px;
+    transform: translateY(-50%);
+  }
+
+  @include hover {
+    background-color: $color-sapphire;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include focus {
+    background-color: $color-sapphire;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include active-not-focus-visible {
+    background-color: $color-sapphire;
+
+    &::before {
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 
 .faq__item h3 {

@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initAccordions} from './modules/accordion/init-accordion';
 import {initVideo} from './modules/init-video';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initSwiper} from './modules/init-swiper';
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     const form = new Form();
     window.form = form;
+    initAccordions();
     initVideo();
     initTabs();
     initSwiper();
