@@ -52,6 +52,27 @@
   }
 }
 
+.form__field-wrapper {
+  position: relative;
+
+  &.is-invalid input {
+    box-shadow: inset 0 -1px $color-torch-red-2;
+    background-color: $color-sapphire;
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    &.is-invalid {
+      color: $color-torch-red-2;
+    }
+}
+
 .form__field-wrapper input {
   padding: 4px 0;
   width: 100%;
