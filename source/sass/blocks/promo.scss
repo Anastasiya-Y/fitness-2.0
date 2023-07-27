@@ -1,5 +1,6 @@
 .promo {
   padding: 51px 0;
+
   background-image: $red-blue-conic;
 
   @include vp-1199 {
@@ -12,8 +13,10 @@
 }
 
 .promo__wrapper {
-  color: $color-default-white;
   display: grid;
+
+  color: $color-default-white;
+
   grid-template-columns: 148px 249px auto;
   grid-template-rows: repeat(2, auto);
 
@@ -22,7 +25,6 @@
   }
 
   @include vp-767 {
-    //grid-template-columns: 113px auto;
     grid-template-columns: 113px 1fr;
   }
 }
@@ -30,11 +32,13 @@
 .promo__list {
   margin: 305px 16px 0 0;
   padding: 0;
+
   list-style-type: none;
-  text-align: right;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
+  text-align: right;
+
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
@@ -49,9 +53,11 @@
 
 .promo__info {
   margin-top: 117px;
-  font-family: $ff-alumni-sans;
+
   font-weight: 600;
+  font-family: $ff-alumni-sans;
   text-align: right;
+
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
@@ -65,39 +71,43 @@
 }
 
 .promo__info span {
+  display: block;
+  margin: 0 52px 20px 0;
+
   font-size: 48px;
   line-height: 46px;
   text-transform: lowercase;
-  display: block;
-  margin: 0 52px 20px 0;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
+    margin: 0 6px 12px 0;
+
     font-size: 34px;
     line-height: 34px;
-    margin: 0 6px 12px 0;
   }
 
   @include vp-767 {
+    margin: 0 4px 191px 0;
+
     font-size: 27px;
     line-height: 27px;
-    margin: 0 4px 191px 0;
   }
 }
 
 .promo__info h1 {
+  display: block;
+  margin: 0 0 7px 0;
+
   font-size: 92px;
   line-height: 110px;
   text-transform: uppercase;
-  display: block;
-  margin: 0 0 7px 0;
-  -webkit-text-stroke-width: 2px;
   letter-spacing: 5px;
 
   @include vp-1199 {
+    margin: 0 1px 16px 0;
+
     font-size: 72px;
     line-height: 85px;
-    margin: 0 1px 16px 0;
     text-transform: none;
     letter-spacing: 4px;
   }
@@ -106,35 +116,43 @@
     position: absolute;
     top: 45px;
     right: -2px;
+
     margin: 0;
   }
+
+  -webkit-text-stroke-width: 2px;
 }
 
 .promo__link {
-  box-shadow: inset 0px 0px 0px 4px $color-default-white;
-  width: 234px;
-  justify-self: end;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
   align-self: start;
+  width: 234px;
   margin-top: -2px;
   padding: 18px 20px 19px 20px;
+
   line-height: 24px;
 
+  box-shadow: inset 0 0 0 4px $color-default-white;
+
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
   @include hover {
+    color: $color-egyptian-blue;
+
     background-color: $color-default-white;
     background-image: none;
-    color: $color-egyptian-blue;
   }
 
   @include focus {
+    color: $color-egyptian-blue;
+
     background-color: $color-default-white;
     background-image: none;
-    color: $color-egyptian-blue;
   }
 
   @include active-not-focus-visible {
     color: $color-sapphire;
+
     background-color: $color-default-white;
   }
 
@@ -144,14 +162,18 @@
 
   @include vp-767 {
     width: 100%;
-    grid-column: 1 / 3;
     margin-top: 21px;
     padding: 20px 20px 19px 20px;
+
+    grid-column: 1 / 3;
   }
+
+  justify-self: end;
 }
 
 .promo__image-wrapper {
   margin-left: 63px;
+
   grid-column: 3 / 4;
   grid-row: 1 / 3;
 
@@ -165,7 +187,6 @@
 }
 
 .promo__image-wrapper img {
-
   @include vp-1199 {
     width: 324px;
     height: 390px;

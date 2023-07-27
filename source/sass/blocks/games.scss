@@ -12,6 +12,7 @@
 
 .games__wrapper {
   display: grid;
+
   grid-template-columns: repeat(2, auto);
 
   @include vp-767 {
@@ -21,29 +22,33 @@
 }
 
 .games__info {
-  background-color: $color-torch-red;
+  display: grid;
+  align-items: start;
   padding: 86px 78px 85px 78px;
-  color: $color-default-white;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  display: grid;
-  grid-template-columns: auto 27px auto;
-  grid-template-rows: repeat(5, min-content) repeat(2, auto);
-  grid-template-areas:
-    "title date-label date-label"
+  color: $color-default-white;
+
+  background-color: $color-torch-red;
+
+  grid-template-areas: "title date-label date-label"
     "title day month"
     "title day year"
     "title time-label time-label"
     "title time time"
     "description description description"
     "link link link";
-  align-items: start;
+  grid-template-columns: auto 27px auto;
+  grid-template-rows: repeat(5, min-content) repeat(2, auto);
 
   @include vp-1199 {
+    padding: 51px 45px 49px 45px;
+
     font-size: 12px;
     line-height: 18px;
-    padding: 51px 45px 49px 45px;
+
     grid-template-columns: auto 16px auto;
   }
 
@@ -53,29 +58,36 @@
 }
 
 .games__info h2 {
-  font-family: $ff-alumni-sans;
+  margin: 0 58px 0 13px;
+
   font-weight: 600;
   font-size: 82px;
   line-height: 79px;
-  margin: 0 58px 0 13px;
+  font-family: $ff-alumni-sans;
   text-transform: uppercase;
-  grid-area: title;
   letter-spacing: 0.03em;
 
+  grid-area: title;
+
   @include vp-1199 {
+    margin: 0 33px 0 8px;
+
     font-size: 48px;
     line-height: 46px;
-    margin: 0 33px 0 8px;
   }
 
   @include vp-767 {
-    margin: 0 32px 0 8px;
+    margin-right: 32px;
   }
 }
 
 .games__date-label,
 .games__time-label {
   position: relative;
+
+  @include vp-1199 {
+    line-height: 46px;
+  }
 
   &::before {
     content: "";
@@ -87,31 +99,29 @@
 
     background-color: $color-default-white;
   }
-
-  @include vp-1199 {
-    line-height: 46px;
-  }
 }
 
 .games__date-label {
-  grid-area: date-label;
   line-height: 11px;
 
-  &::before {
-    width: 64px;
-  }
+  grid-area: date-label;
 
   @include vp-1199 {
     margin-bottom: 2px;
 
     &::before {
       bottom: -5px;
+
       width: 42px;
     }
   }
 
   @include vp-767 {
     margin: 1px 0 2px 0;
+  }
+
+  &::before {
+    width: 64px;
   }
 }
 
@@ -126,8 +136,9 @@
 }
 
 .games__day {
-  grid-area: day;
   line-height: 67px;
+
+  grid-area: day;
 
   @include vp-1199 {
     line-height: 36px;
@@ -146,8 +157,9 @@
 }
 
 .games__month {
-  grid-area: month;
   align-self: end;
+
+  grid-area: month;
 }
 
 .games__year {
@@ -155,27 +167,31 @@
 }
 
 .games__time-label {
-  grid-area: time-label;
   margin-top: 10px;
+
+  grid-area: time-label;
+
+  @include vp-1199 {
+    margin: 0;
+
+    line-height: 18px;
+
+    &::before {
+      bottom: -2px;
+
+      width: 56px;
+    }
+  }
 
   &::before {
     width: 87px;
   }
-
-  @include vp-1199 {
-    margin: 0;
-    line-height: 18px;
-
-    &::before {
-      width: 56px;
-      bottom: -2px;
-    }
-  }
 }
 
 .games__time {
-  grid-area: time;
   line-height: 66px;
+
+  grid-area: time;
 
   @include vp-1199 {
     line-height: 32px;
@@ -184,42 +200,51 @@
 
 .games__info p {
   margin: 12px 0 46px 0;
+
   grid-area: description;
 
   @include vp-1199 {
-    margin: 3px 0 30px;
+    margin: 3px 0 30px 0;
   }
 }
 
 .games__link {
-  grid-area: link;
-  line-height: 14px;
-  box-shadow: inset 0px 0px 0px 4px $color-default-white;
   padding: 28px 20px;
 
+  line-height: 14px;
+
+  box-shadow: inset 0 0 0 4px $color-default-white;
+
+  grid-area: link;
+
   @include hover {
+    color: $color-egyptian-blue;
+
     background-color: $color-default-white;
     background-image: none;
-    color: $color-egyptian-blue;
   }
 
   @include focus {
+    color: $color-egyptian-blue;
+
     background-color: $color-default-white;
     background-image: none;
-    color: $color-egyptian-blue;
   }
 
   @include active-not-focus-visible {
     color: $color-sapphire;
-    background-image: none;
+
     background-color: $color-default-white;
+    background-image: none;
   }
 
   @include vp-1199 {
-    box-shadow: inset 0px 0px 0px 2px $color-default-white;
+    padding: 15px 20px;
+
     font-size: 10px;
     line-height: 12px;
-    padding: 15px 20px;
+
+    box-shadow: inset 0 0 0 2px $color-default-white;
   }
 
   @include vp-767 {
@@ -228,7 +253,6 @@
 }
 
 .games__image-wrapper img {
-
   @include vp-1199 {
     width: 100%;
     height: 100%;

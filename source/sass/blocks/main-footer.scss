@@ -4,24 +4,25 @@
 
 .main-footer__wrapper {
   display: flex;
-  // flex-wrap: wrap;
-  padding: 36px 0 35px 0;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 36px 0 35px 0;
 
   @include vp-1199 {
     padding-top: 41px;
   }
 
   @include vp-767 {
-    flex-direction: column;
     position: relative;
+
+    flex-direction: column;
   }
 }
 
 .main-footer__logo {
-  margin: 12px 20px 0 0;
   display: flex;
   align-items: center;
+  margin: 12px 20px 0 0;
 
   @include hover {
     & img {
@@ -35,16 +36,8 @@
     }
   }
 
-  &:focus-visible {
-    outline: none;
-  }
-
   @include active-not-focus-visible {
     opacity: 0.5;
-  }
-
-  &:disabled {
-    color: $color-grey;
   }
 
   @include vp-1199 {
@@ -56,9 +49,19 @@
     top: 50px;
     left: 0;
   }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-grey;
+  }
 }
 
 .main-footer__logo img {
+  transition: all $trans-default;
+
   @include vp-1199 {
     width: 80px;
     height: 16px;

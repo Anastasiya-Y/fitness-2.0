@@ -1,19 +1,19 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+@import "vendor/normalize.scss";
 // Swiper 7.4.1
-@import "vendor/swiper";
+@import "vendor/swiper.scss";
 
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/utils";
-@import "global/container";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/fonts.scss";
+@import "global/reboot.scss";
+@import "global/utils.scss";
+@import "global/container.scss";
 
 // Blocks
 // ---------------------------------
@@ -21,9 +21,6 @@
 @import "blocks/advantages.scss";
 @import "blocks/btn.scss";
 @import "blocks/contacts.scss";
-@import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
 @import "blocks/data-accordion.scss";
 @import "blocks/data-tabs.scss";
 @import "blocks/faq.scss";
@@ -40,7 +37,6 @@
 @import "blocks/social.scss";
 @import "blocks/subscription.scss";
 @import "blocks/trainers.scss";
-@import "blocks/custom-select";
 
 // ---------------------------------
 

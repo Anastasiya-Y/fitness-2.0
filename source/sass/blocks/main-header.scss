@@ -1,10 +1,12 @@
 .main-header {
-  background-color: $color-transparent;
-  padding: 30px 0;
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
+  padding: 30px 0;
+
+  background-color: $color-transparent;
 
   @include vp-1199 {
     padding: 32px 0;
@@ -23,8 +25,8 @@
 
 .main-header__logo {
   display: flex;
-  padding: 9px 0;
   margin-right: 10px;
+  padding: 9px 0;
 
   @include hover {
     & img {
@@ -38,24 +40,26 @@
     }
   }
 
-  &:focus-visible {
-    outline: none;
-  }
-
   @include active-not-focus-visible {
     opacity: 0.5;
-  }
-
-  &:disabled {
-    color: $color-grey;
   }
 
   @include vp-767 {
     padding: 6px 0;
   }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-grey;
+  }
 }
 
 .main-header__logo img {
+  transition: all $trans-default;
+
   @include vp-1199 {
     width: 82px;
     height: 15px;
@@ -68,14 +72,17 @@
 }
 
 .main-header__phone {
-  color: $color-default-white;
-  font-family: $ff-alumni-sans;
+  margin-left: 10px;
+  padding: 3px 0;
+
   font-weight: 600;
   font-size: 25px;
   line-height: 24px;
-  margin-left: 10px;
-  padding: 3px 0;
-  letter-spacing: 0.048em;
+  font-family: $ff-alumni-sans;
+  color: $color-default-white;
+  letter-spacing: 0.05em;
+
+  transition: all $trans-default;
 
   @include hover {
     opacity: 0.8;
@@ -85,29 +92,32 @@
     opacity: 0.8;
   }
 
-  &:focus-visible {
-    outline: none;
-  }
-
   @include active-not-focus-visible {
     opacity: 0.5;
   }
 
-  &:disabled {
-    pointer-events: none;
-    color: $color-grey;
-  }
-
   @include vp-1199 {
-    font-size: 23px;
-    letter-spacing: 0.039em;
-    line-height: 23px;
     padding: 6px 0;
+
+    font-size: 23px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
   }
 
   @include vp-767 {
+    padding: 4px 0;
+
     font-size: 19px;
     line-height: 19px;
-    padding: 4px 0;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-grey;
+
+    pointer-events: none;
   }
 }

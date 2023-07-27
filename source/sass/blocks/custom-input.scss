@@ -7,8 +7,8 @@
   padding: 14px 0 28px;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
     width: 100%;
+    padding: 4px 0 48px;
   }
 
   label {
@@ -17,8 +17,8 @@
     width: 100%;
 
     @media screen and (max-width: 767px) {
-      align-items: flex-start;
       flex-direction: column;
+      align-items: flex-start;
     }
 
     input,
@@ -36,8 +36,8 @@
       transition: border 0.3s ease;
 
       @media screen and (max-width: 767px) {
-        max-width: unset;
         width: 100%;
+        max-width: unset;
       }
 
       &:hover {

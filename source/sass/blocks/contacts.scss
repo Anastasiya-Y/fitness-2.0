@@ -11,15 +11,17 @@
 }
 
 .contacts h2 {
-  font-family: $ff-alumni-sans;
+  margin: 0 0 42px 0;
+
   font-weight: 600;
   font-size: 54px;
   line-height: 54px;
-  margin: 0 0 42px 0;
+  font-family: $ff-alumni-sans;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
     margin-bottom: 41px;
+
     font-size: 42px;
     line-height: 42px;
   }
@@ -31,59 +33,67 @@
 }
 
 .contacts__list {
+  position: relative;
+
+  display: grid;
   margin: 0 0 0 5px;
   padding: 0;
+
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
   gap: 15px 50px;
-  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    margin: 0;
+
+    gap: 24px 13%;
+
+    &::before {
+      top: 4px;
+      left: 50%;
+
+      width: 1px;
+      height: calc(100% - 13px);
+
+      background-color: $color-light-slate-grey;
+      transform: translateX(15px);
+    }
+  }
+
+  @include vp-767 {
+    gap: 29px;
+    grid-template-columns: 1fr;
+
+    &::before {
+      display: none;
+    }
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 6px;
     left: 50%;
+
     width: 1px;
     height: calc(100% - 4px);
-    transform: translateX(30px);
 
     background-color: $color-light-slate-grey;
-  }
-
-  @include vp-1199 {
-    margin: 0;
-    gap: 24px 13%;
-
-    &::before {
-      top: 4px;
-      left: 50%;
-      width: 1px;
-      height: calc(100% - 13px);
-      transform: translateX(15px);
-
-      background-color: $color-light-slate-grey;
-    }
-  }
-
-  @include vp-767 {
-    grid-template-columns: 1fr;
-    gap: 29px;
-
-    &::before {
-      display: none;
-    }
+    transform: translateX(30px);
   }
 }
 
 .contacts__list h3 {
+  margin: 0 0 3px 0;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 3px 0;
 
   @include vp-1199 {
     margin-bottom: 15px;
+
     font-size: 20px;
     line-height: 20px;
   }
@@ -115,9 +125,9 @@
 .contacts__address,
 .contacts__tel,
 .contacts__email {
+  font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 400;
 
   @include vp-1199 {
     font-size: 18px;
@@ -138,6 +148,8 @@
 .contacts__email {
   color: $color-sapphire;
 
+  transition: all $trans-default;
+
   @include hover {
     opacity: 0.8;
   }
@@ -146,17 +158,15 @@
     opacity: 0.8;
   }
 
-  &:focus-visible {
-    outline: none;
-  }
-
   @include active-not-focus-visible {
     opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   &:disabled {
     color: $color-grey;
   }
 }
-
-

@@ -21,51 +21,57 @@
 
 .gym__info {
   max-width: 415px;
-  padding: 45px 0 0 60px;
   margin-right: 85px;
+  padding: 45px 0 0 60px;
 
   @include vp-1199 {
     max-width: none;
-    padding: 0;
     margin: 0 0 43px 0;
+    padding: 0;
+
     text-align: center;
   }
 
   @include vp-767 {
     margin-bottom: 40px;
+
     text-align: left;
   }
 }
 
 .gym__info h2 {
-  font-family: $ff-alumni-sans;
+  margin: 0 0 17px 0;
+
   font-weight: 600;
   font-size: 48px;
   line-height: 46px;
-  margin: 0 0 17px 0;
+  font-family: $ff-alumni-sans;
   letter-spacing: 0.03em;
 
   @include vp-1199 {
     max-width: 480px;
     margin: 0 auto 7px auto;
+
     font-size: 42px;
     line-height: 42px;
   }
 
   @include vp-767 {
-    font-size: 32px;
-    line-height: 32px;
     max-width: none;
     margin: 0 0 20px 0;
+
+    font-size: 32px;
+    line-height: 32px;
   }
 }
 
 .gym__info span {
+  display: block;
+  margin: 0 0 44px 0;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  margin: 0 0 44px 0;
-  display: block;
 
   @include vp-1199 {
     max-width: 480px;
@@ -73,18 +79,20 @@
   }
 
   @include vp-767 {
-    font-size: 18px;
-    line-height: 20px;
     max-width: none;
     margin: 0 0 40px 0;
+
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 
 .gym__info p {
+  display: block;
+  margin: 0 0 8px 0;
+
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 8px 0;
-  display: block;
 
   @include vp-1199 {
     max-width: 510px;
@@ -128,7 +136,6 @@
 }
 
 .gym__image-wrapper img {
-
   @include vp-1199 {
     width: 678px;
     height: 345px;
@@ -141,28 +148,33 @@
 }
 
 .gym__video-wrapper {
-  width: 364px;
-  height: 226px;
   position: absolute;
   top: 289px;
   left: -63px;
 
+  width: 364px;
+  height: 226px;
+
   @include vp-1199 {
-    width: 266px;
-    height: 167px;
     top: auto;
     bottom: 0;
     left: 50%;
+
+    width: 266px;
+    height: 167px;
+
     transform: translate(-50%);
   }
 
   @include vp-767 {
-    width: 100vw;
-    height: 52vw;
     position: relative;
-    transform: none;
     top: 0;
     left: 0;
+
+    width: 100vw;
+    height: 52vw;
+
+    transform: none;
   }
 }
 
@@ -174,6 +186,7 @@
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
 
@@ -201,8 +214,10 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   border: none;
 
   @include vp-767 {
@@ -214,121 +229,79 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  display: none;
   width: 100px;
   height: 100px;
   padding: 0;
+
+  background-color: $color-transparent;
+  background-image: url("../img/svg/button-border.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   border: none;
   border-radius: 50%;
-  background-image: url("../img/svg/button-border.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: $color-transparent;
-  z-index: 1;
-  display: none;
+  transform: translate(-50%, -50%);
   cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    width: 72px;
-    height: 72px;
-
-    background-image: $red-blue-linear-diagonal;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 42px;
-    left: 46px;
-    width: 13px;
-    height: 15px;
-    clip-path: polygon(0 0, 0% 100%, 100% 50%);
-
-    background-color: $color-default-white;
-  }
+  transition: all $trans-default;
 
   @include hover {
     background-image: none;
-    border: 2px solid $color-sapphire;
+    box-shadow: inset 0 0 0 1px $color-sapphire;
 
     &::before {
-      background-image: none;
       background-color: $color-default-white;
+      background-image: none;
     }
 
     &::after {
       background-color: $color-sapphire;
-      top: 40px;
-      left: 44px;
     }
   }
 
   @include focus {
     background-image: none;
-    border: 2px solid $color-sapphire;
+    box-shadow: inset 0 0 0 1px $color-sapphire;
 
     &::before {
-      background-image: none;
       background-color: $color-default-white;
+      background-image: none;
     }
 
     &::after {
       background-color: $color-sapphire;
-      top: 40px;
-      left: 44px;
     }
-  }
-
-  &:focus-visible {
-    outline: none;
   }
 
   @include active-not-focus-visible {
     background-image: none;
-    border: 2px solid $color-sapphire;
+    box-shadow: inset 0 0 0 1px $color-sapphire;
 
     &::before {
-      background-image: none;
-      background-color: $color-default-white;
       width: 58px;
       height: 58px;
+
+      background-color: $color-default-white;
+      background-image: none;
     }
 
     &::after {
       background-color: $color-sapphire;
-      top: 40px;
-      left: 44px;
-    }
-  }
-
-  &:disabled {
-    background-image: none;
-    border: 2px solid rgba($color-sapphire, 0.4);
-    pointer-events: none;
-
-    &::before {
-      background-image: none;
-      background-color: $color-default-white;
-    }
-
-    &::after {
-      background-color: rgba($color-sapphire, 0.4);
-      top: 40px;
-      left: 44px;
     }
   }
 
   @include vp-1199 {
     width: 73px;
     height: 73px;
+
+    @include active-not-focus-visible {
+      &::before {
+        width: 31px;
+        height: 31px;
+      }
+    }
 
     &::before {
       width: 52px;
@@ -338,41 +311,59 @@
     &::after {
       top: 31px;
       left: 33px;
+
       width: 9px;
       height: 10px;
     }
+  }
 
-    @include hover {
-      &::after {
-        top: 29px;
-        left: 31px;
-      }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 72px;
+    height: 72px;
+
+    background-image: $red-blue-linear-diagonal;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 46px;
+
+    width: 13px;
+    height: 15px;
+
+    background-color: $color-default-white;
+
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    background-image: none;
+    box-shadow: inset 0 0 0 1px rgba($color-sapphire, 0.4);
+
+    pointer-events: none;
+
+    &::before {
+      background-color: $color-default-white;
+      background-image: none;
     }
 
-    @include focus {
-      &::after {
-        top: 29px;
-        left: 31px;
-      }
-    }
-    @include active-not-focus-visible {
-      &::before {
-        width: 31px;
-        height: 31px;
-      }
-
-      &::after {
-        top: 29px;
-        left: 31px;
-      }
-    }
-
-    &:disabled {
-
-      &::after {
-        top: 29px;
-        left: 31px;
-      }
+    &::after {
+      background-color: rgba($color-sapphire, 0.4);
     }
   }
 }

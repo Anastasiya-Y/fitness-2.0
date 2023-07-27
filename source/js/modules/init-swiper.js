@@ -42,4 +42,3 @@ const initSwiper = () => {
 };
 
 export {initSwiper};
-

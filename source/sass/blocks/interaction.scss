@@ -1,17 +1,7 @@
 .interaction {
-  background-image: $blue-white;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 1px;
-
-    background-color: $color-light-slate-grey;
-  }
+  background-image: $blue-white;
 
   @include vp-1199 {
     background-image: none;
@@ -19,6 +9,18 @@
     &::before {
       display: none;
     }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 1px;
+
+    background-color: $color-light-slate-grey;
   }
 }
 
