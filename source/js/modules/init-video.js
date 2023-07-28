@@ -12,7 +12,7 @@ function createVideo(video) {
   const link = video.querySelector('.gym__video-link');
   const button = video.querySelector('.gym__video-button');
 
-  if (!link && !button) {
+  if (!link || !button) {
     return;
   }
 
