@@ -307,16 +307,20 @@
 .subscription__price {
   position: relative;
 
+  padding-right: 44px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include vp-767 {
+    padding-right: 35px;
+  }
 }
 
-.subscription__item span {
+.subscription__item span:first-of-type {
   position: relative;
   z-index: 2;
-
-  margin-right: 44px;
 
   font-weight: 700;
   font-size: 60px;
@@ -339,7 +343,6 @@
   @include vp-767 {
     font-size: 48px;
     line-height: 48px;
-    margin-right: 35px;
 
     &::before {
       bottom: 4px;
@@ -352,30 +355,23 @@
 }
 
 .subscription__item span:last-of-type {
-  position: relative;
+  position: absolute;
+  top: -6px;
+  right: -2px;
+  z-index: 2;
 
-  display: block;
-  margin: 0;
-
-  &::before {
-    content: "₽";
-    position: absolute;
-    top: 0;
-    left: -30px;
-
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 48px;
-    font-family: $ff-rouble;
-    color: $color-sapphire;
-  }
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+  font-family: $ff-rouble;
+  color: $color-sapphire;
 
   @include vp-767 {
-    &::before {
-      left: -24px;
-      font-size: 44px;
-      line-height: 39px;
-    }
+    top: -3px;
+    right: 0;
+
+    font-size: 44px;
+    line-height: 44px;
   }
 }
 
