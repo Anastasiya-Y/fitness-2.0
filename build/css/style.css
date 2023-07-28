@@ -2095,7 +2095,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 259px;
+  width: 259px;
   padding: 18px 10px;
   font-weight: 400;
   font-size: 18px;
@@ -2113,7 +2113,7 @@ button,
 }
 @media (max-width: 1199px) {
   .faq__control {
-    min-width: auto;
+    width: auto;
   }
 }
 @media (max-width: 767px) {
@@ -2381,6 +2381,7 @@ button,
   display: -ms-grid;
   display: grid;
   padding: 59px 56px 53px 62px;
+  height: 100%;
   color: #ffffff;
   background-color: #1c3374;
   gap: 13px 28px;
@@ -2436,7 +2437,6 @@ button,
 
 .feedback__slide h3 {
   margin: 0 0 2px 0;
-  line-height: 23px;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
@@ -2687,6 +2687,9 @@ button,
 }
 
 .form__field-wrapper input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   padding: 4px 0;
   font-weight: 400;
@@ -2812,8 +2815,14 @@ button,
 .games__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-  grid-template-columns: repeat(2, auto);
+  -ms-grid-columns: 500px auto;
+  grid-template-columns: 500px auto;
+}
+@media (max-width: 1199px) {
+  .games__wrapper {
+    -ms-grid-columns: 292px auto;
+    grid-template-columns: 292px auto;
+  }
 }
 @media (max-width: 767px) {
   .games__wrapper {
@@ -3074,6 +3083,10 @@ button,
   }
 }
 
+.games__image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (max-width: 1199px) {
   .games__image-wrapper img {
     width: 100%;
@@ -4141,6 +4154,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   border: none;
   -ms-grid-row: 1;
@@ -4357,6 +4372,13 @@ button,
 .promotion__year-text .promotion__link::before {
   bottom: 8px;
   background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .promotion__year-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .promotion__year-image-wrapper img {

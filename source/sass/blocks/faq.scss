@@ -73,7 +73,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 259px;
+  width: 259px;
   padding: 18px 10px;
 
   font-weight: 400;
@@ -91,7 +91,7 @@
   transition: all $trans-default;
 
   @include vp-1199 {
-    min-width: auto;
+    width: auto;
   }
 
   @include vp-767 {
@@ -266,8 +266,6 @@
       width: 12px;
     }
   }
-
-
 
   &:focus-visible {
     outline: none;

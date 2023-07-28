@@ -63,6 +63,7 @@
 .feedback__slide {
   display: grid;
   padding: 59px 56px 53px 62px;
+  height: 100%;
 
   color: $color-default-white;
 
@@ -111,7 +112,6 @@
 
 .feedback__slide h3 {
   margin: 0 0 2px 0;
-  line-height: 23px;
 
   font-weight: 700;
   font-size: 20px;

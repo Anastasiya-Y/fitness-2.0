@@ -75,6 +75,7 @@
 
 .promotion__option--year {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
 
   border: none;
@@ -291,6 +292,13 @@
     bottom: 8px;
 
     background-color: $color-default-white;
+  }
+}
+
+.promotion__year-image-wrapper {
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
   }
 }
 

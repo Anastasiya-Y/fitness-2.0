@@ -13,7 +13,11 @@
 .games__wrapper {
   display: grid;
 
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 500px auto;
+
+  @include vp-1199 {
+    grid-template-columns: 292px auto;
+  }
 
   @include vp-767 {
     display: flex;
@@ -255,6 +259,8 @@
 }
 
 .games__image-wrapper img {
+  object-fit: cover;
+
   @include vp-1199 {
     width: 100%;
     height: 100%;
