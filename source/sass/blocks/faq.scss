@@ -1,14 +1,14 @@
 .faq {
-  padding: 126px 0 120px 0;
+  padding: 126px 0 116px 0;
 
   background-color: $color-ghost-white;
 
   @include vp-1199 {
-    padding: 104px 0 100px 0;
+    padding: 105px 0 89px 0;
   }
 
   @include vp-767 {
-    padding: 73px 0 70px 0;
+    padding: 73px 0 71px 0;
   }
 }
 
@@ -117,6 +117,10 @@
   list-style-type: none;
 }
 
+.faq__element {
+  width: 100%;
+}
+
 .faq__list {
   margin: 0;
   padding: 0;
@@ -127,16 +131,28 @@
 .faq__item {
   position: relative;
 
-  padding: 35px 130px 20px 1px;
+  padding: 35px 130px 19px 1px;
 
   border-top: 1px solid rgba($color-resolution-blue, 0.2);
 
   @include vp-1199 {
-    padding: 37px 130px 16px 0;
+    padding: 35px 130px 16px 0;
   }
 
   @include vp-767 {
-    padding: 19px 25px 21px 0;
+    padding: 19px 23px 8px 0;
+  }
+
+  &.is-active {
+    padding: 35px 130px 22px 1px;
+
+    @include vp-1199 {
+      padding: 31px 130px 22px 0;
+    }
+
+    @include vp-767 {
+      padding: 19px 19px 22px 0;
+    }
   }
 
   &.is-active .faq__accordion-button {
@@ -160,7 +176,7 @@
 
 .faq__accordion-button {
   position: absolute;
-  top: 25px;
+  top: 23px;
   right: 0;
 
   width: 42px;
@@ -173,6 +189,36 @@
   cursor: pointer;
 
   transition: all $trans-default;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-color: $color-sapphire;
+
+    transition: all $trans-default;
+  }
+
+  &::before {
+    top: 11px;
+    left: 20px;
+
+    width: 1px;
+    height: 18px;
+
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    top: 20px;
+    left: 11px;
+
+    width: 18px;
+    height: 1px;
+
+    transform: translateY(-50%);
+  }
 
   @include hover {
     background-color: $color-sapphire;
@@ -221,35 +267,7 @@
     }
   }
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
 
-    background-color: $color-sapphire;
-
-    transition: all $trans-default;
-  }
-
-  &::before {
-    top: 11px;
-    left: 20px;
-
-    width: 1px;
-    height: 18px;
-
-    transform: translateX(-50%);
-  }
-
-  &::after {
-    top: 20px;
-    left: 11px;
-
-    width: 18px;
-    height: 1px;
-
-    transform: translateY(-50%);
-  }
 
   &:focus-visible {
     outline: none;

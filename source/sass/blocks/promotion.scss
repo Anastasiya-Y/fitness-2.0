@@ -1,8 +1,8 @@
 .promotion {
-  padding: 141px 0 121px 0;
+  padding: 140px 0 120px 0;
 
   @include vp-1199 {
-    padding: 97px 0 100px 0;
+    padding: 96px 0 100px 0;
   }
 
   @include vp-767 {
@@ -11,7 +11,7 @@
 }
 
 .promotion h2 {
-  margin: 0 0 39px 0;
+  margin: 0 0 38px 0;
 
   font-weight: 600;
   font-size: 54px;
@@ -63,7 +63,7 @@
   border-image-slice: 1;
 
   @include vp-1199 {
-    padding: 25px 27px 15px 27px;
+    padding: 24px 28px 14px 28px;
   }
 
   @include vp-767 {
@@ -119,7 +119,7 @@
   line-height: 26px;
 
   @include vp-1199 {
-    margin-bottom: 9px;
+    margin-bottom: 11px;
   }
 
   @include vp-767 {
@@ -242,7 +242,7 @@
 
 .promotion__year-text span {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 
   font-weight: 700;
   font-size: 70px;
@@ -254,13 +254,13 @@
 }
 
 .promotion__year-text p {
-  margin-bottom: 179px;
+  margin-bottom: 180px;
 
   font-size: 18px;
-  line-height: 26px;
+  line-height: 25px;
 
   @include vp-767 {
-    margin-bottom: 21px;
+    margin-bottom: 23px;
   }
 }
 

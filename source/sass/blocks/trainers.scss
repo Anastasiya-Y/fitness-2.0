@@ -1,5 +1,5 @@
 .trainers {
-  padding: 0 0 105px 0;
+  padding: 0 0 104px 0;
 
   @include vp-1199 {
     padding-bottom: 100px;
@@ -11,7 +11,7 @@
 }
 
 .trainers h2 {
-  margin: 0 0 53px 0;
+  margin: 0 0 55px 0;
 
   font-weight: 600;
   font-size: 54px;
@@ -30,7 +30,7 @@
 
   @include vp-767 {
     max-width: none;
-    margin: 0 0 42px 0;
+    margin: 0 0 45px 0;
 
     font-size: 32px;
     line-height: 32px;
@@ -243,11 +243,16 @@
 }
 
 .trainers__image-wrapper img {
-  @include vp-767 {
-    width: auto;
+  @include vp-1199 {
+    width: 100%;
   }
 
-  object-fit: cover;
+  @include vp-767 {
+    width: auto;
+    max-width: none;
+
+    object-fit: cover;
+  }
 }
 
 .trainers__button {
