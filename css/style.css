@@ -3515,6 +3515,28 @@ button,
   transform: none;
 }
 
+.trainers__slide.swiper-slide-active .trainers__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.trainers__slide.swiper-slide-active .trainers__info::before {
+  opacity: 1;
+}
+
+.trainers__slide.swiper-slide-active .trainers__info-wrapper {
+  display: block;
+}
+
+.trainers__slide.swiper-slide-active .trainers__info h3 {
+  position: static;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .trainers__slide:active:not(.focus-visible) .trainers__info {
   position: absolute;
   top: 0;
