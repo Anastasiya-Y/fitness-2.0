@@ -1181,13 +1181,6 @@ button.swiper-pagination-bullet {
   font-display: swap;
   src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Rouble";
-  font-display: swap;
-  src: url("../fonts/rouble.woff2") format("woff2"), url("../fonts/rouble.woff") format("woff");
-}
 *,
 *::before,
 *::after {
@@ -4776,7 +4769,7 @@ button,
   }
 }
 
-.subscription__item span:first-of-type {
+.subscription__price span {
   position: relative;
   z-index: 2;
   font-weight: 700;
@@ -4785,7 +4778,7 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #103aae;
 }
-.subscription__item span:first-of-type::before {
+.subscription__price span::before {
   content: attr(data-price);
   position: absolute;
   bottom: 4px;
@@ -4796,11 +4789,11 @@ button,
   color: #e8e8e8;
 }
 @media (max-width: 767px) {
-  .subscription__item span:first-of-type {
+  .subscription__price span {
     font-size: 48px;
     line-height: 48px;
   }
-  .subscription__item span:first-of-type::before {
+  .subscription__price span::before {
     bottom: 4px;
     left: -14px;
     font-size: 79px;
@@ -4808,28 +4801,16 @@ button,
   }
 }
 
-.subscription__item span:last-of-type {
+.subscription__price svg {
   position: absolute;
-  top: -6px;
-  right: -5px;
+  top: 9px;
+  right: 0;
   z-index: 2;
-  font-weight: 600;
-  font-size: 58px;
-  line-height: 58px;
-  font-family: "Rouble", "Arial", sans-serif;
-  color: #102654;
-}
-@media (max-width: 1199px) {
-  .subscription__item span:last-of-type {
-    top: -7px;
-  }
 }
 @media (max-width: 767px) {
-  .subscription__item span:last-of-type {
-    top: -4px;
-    right: -3px;
-    font-size: 45px;
-    line-height: 45px;
+  .subscription__price svg {
+    width: 24px;
+    height: 33px;
   }
 }
 

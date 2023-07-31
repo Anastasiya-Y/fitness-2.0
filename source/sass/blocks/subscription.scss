@@ -318,7 +318,7 @@
   }
 }
 
-.subscription__item span:first-of-type {
+.subscription__price span {
   position: relative;
   z-index: 2;
 
@@ -354,28 +354,15 @@
   }
 }
 
-.subscription__item span:last-of-type {
+.subscription__price svg {
   position: absolute;
-  top: -6px;
-  right: -5px;
+  top: 9px;
+  right: 0;
   z-index: 2;
 
-  font-weight: 600;
-  font-size: 58px;
-  line-height: 58px;
-  font-family: $ff-rouble;
-  color: $color-sapphire;
-
-  @include vp-1199 {
-    top: -7px;
-  }
-
   @include vp-767 {
-    top: -4px;
-    right: -3px;
-
-    font-size: 45px;
-    line-height: 45px;
+    width: 24px;
+    height: 33px;
   }
 }
 
