@@ -3212,6 +3212,16 @@ button,
   background-color: #f8f9fc;
 }
 
+.subscription::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -143px;
+  z-index: 1;
+  width: 287px;
+  height: 487px;
+}
+
 .subscription h2 {
   margin: 0 0 13px 0;
   font-weight: 600;
@@ -3694,13 +3704,6 @@ button,
 
 @media (min-width: 1200px) {
   .subscription::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -143px;
-    z-index: 1;
-    width: 287px;
-    height: 487px;
     background-image: url("../img/background/weights-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
