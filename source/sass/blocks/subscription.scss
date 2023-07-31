@@ -16,14 +16,14 @@
 
     width: 287px;
     height: 487px;
+
+    background-image: url("../img/background/weights-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   @include vp-1200 {
     &::before {
-      background-image: url("../img/background/weights-desktop.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/background/weights-desktop@2x.png");
       }
