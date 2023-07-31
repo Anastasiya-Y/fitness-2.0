@@ -4623,7 +4623,7 @@ button,
   }
   .subscription__control::before {
     left: 0;
-    width: calc(100% + 7px);
+    width: 100%;
   }
 }
 .subscription__control.is-active {
