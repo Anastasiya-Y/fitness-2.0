@@ -4811,20 +4811,25 @@ button,
 .subscription__item span:last-of-type {
   position: absolute;
   top: -6px;
-  right: -2px;
+  right: -5px;
   z-index: 2;
   font-weight: 600;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 58px;
+  line-height: 58px;
   font-family: "Rouble", "Arial", sans-serif;
   color: #102654;
 }
+@media (max-width: 1199px) {
+  .subscription__item span:last-of-type {
+    top: -7px;
+  }
+}
 @media (max-width: 767px) {
   .subscription__item span:last-of-type {
-    top: -3px;
-    right: 0;
-    font-size: 44px;
-    line-height: 44px;
+    top: -4px;
+    right: -3px;
+    font-size: 45px;
+    line-height: 45px;
   }
 }
 
@@ -4941,57 +4946,19 @@ button,
   width: 260px;
   height: 294px;
 }
-@media (hover: hover) {
-  .trainers__slide:hover:not(.focus-visible) .trainers__info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  .trainers__slide:hover:not(.focus-visible) .trainers__info::before {
-    opacity: 1;
-  }
-  .trainers__slide:hover:not(.focus-visible) .trainers__info-wrapper {
-    display: block;
-  }
-  .trainers__slide:hover:not(.focus-visible) .trainers__info h3 {
-    position: static;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-  }
-}
-.trainers__slide.focus-visible:focus .trainers__info {
+.trainers__slide:hover .trainers__info {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
 }
-.trainers__slide.focus-visible:focus .trainers__info::before {
+.trainers__slide:hover .trainers__info::before {
   opacity: 1;
 }
-.trainers__slide.focus-visible:focus .trainers__info-wrapper {
+.trainers__slide:hover .trainers__info-wrapper {
   display: block;
 }
-.trainers__slide.focus-visible:focus .trainers__info h3 {
-  position: static;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-.trainers__slide.swiper-slide-active .trainers__info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-.trainers__slide.swiper-slide-active .trainers__info::before {
-  opacity: 1;
-}
-.trainers__slide.swiper-slide-active .trainers__info-wrapper {
-  display: block;
-}
-.trainers__slide.swiper-slide-active .trainers__info h3 {
+.trainers__slide:hover .trainers__info h3 {
   position: static;
   -webkit-transform: none;
       -ms-transform: none;

@@ -65,30 +65,7 @@
   width: 260px;
   height: 294px;
 
-  @include hover-focus {
-    .trainers__info {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-
-      &::before {
-        opacity: 1;
-      }
-    }
-
-    .trainers__info-wrapper {
-      display: block;
-    }
-
-    .trainers__info h3 {
-      position: static;
-
-      transform: none;
-    }
-  }
-
-  &.swiper-slide-active {
+  &:hover {
     .trainers__info {
       position: absolute;
       top: 0;
