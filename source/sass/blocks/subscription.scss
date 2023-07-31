@@ -7,17 +7,19 @@
 
   background-color: $color-ghost-white;
 
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -143px;
+    z-index: 1;
+
+    width: 287px;
+    height: 487px;
+  }
+
   @include vp-1200 {
     &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -143px;
-      z-index: 1;
-
-      width: 287px;
-      height: 487px;
-
       background-image: url("../img/background/weights-desktop.png");
       background-repeat: no-repeat;
       background-size: cover;

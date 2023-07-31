@@ -4158,6 +4158,7 @@ button,
   .promotion__option--year {
     display: -ms-grid;
     display: grid;
+    padding: 0;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
@@ -4177,6 +4178,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
 }
 
@@ -4463,11 +4465,15 @@ button,
   z-index: 1;
   width: 287px;
   height: 487px;
-  background-image: url("../img/background/weights-desktop.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-width: 1200px) {
+  .subscription::before {
+    background-image: url("../img/background/weights-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
   .subscription::before {
     background-image: url("../img/background/weights-desktop@2x.png");
   }
