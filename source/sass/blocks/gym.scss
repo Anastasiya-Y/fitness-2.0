@@ -247,6 +247,8 @@
 
   transition: all $trans-default;
 
+  user-select: none;
+
   &::before {
     content: "";
     position: absolute;

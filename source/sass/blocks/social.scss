@@ -27,6 +27,8 @@
 
   transition: all $trans-default;
 
+  user-select: none;
+
   @include hover {
     background-color: $color-egyptian-blue;
 

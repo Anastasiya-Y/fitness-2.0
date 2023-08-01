@@ -16,6 +16,8 @@
 
   transition: all $trans-default;
 
+  user-select: none;
+
   @include hover {
     color: $color-default-white;
 

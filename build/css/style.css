@@ -1727,6 +1727,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
@@ -2198,6 +2202,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .faq__accordion-button::before, .faq__accordion-button::after {
   content: "";
@@ -2490,6 +2498,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .feedback__button:hover:not(.focus-visible) {
@@ -2695,6 +2707,10 @@ button,
           box-shadow: inset 0 -1px rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .form__field-wrapper input:hover:not(.focus-visible) {
@@ -3355,6 +3371,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gym__video-button::before {
   content: "";
@@ -3748,17 +3768,24 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0 0 0 7px;
   padding: 2px 0 0 0;
+  max-width: 920px;
   list-style-type: none;
+}
+@media (max-width: 1199px) {
+  .main-nav__list {
+    max-width: 430px;
+  }
 }
 @media (max-width: 767px) {
   .main-nav__list {
     display: block;
     margin: 0 0 29px -5px;
+    max-width: none;
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
@@ -3804,6 +3831,10 @@ button,
   color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .main-nav__link::before {
   content: "";
@@ -4317,6 +4348,17 @@ button,
   font-size: 28px;
   line-height: 28px;
 }
+@media (max-width: 1199px) {
+  .promotion__year-text h3 {
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .promotion__year-text h3 {
+    margin-bottom: 3px;
+    font-size: 26px;
+  }
+}
 
 .promotion__year-text span {
   display: block;
@@ -4335,6 +4377,12 @@ button,
   margin-bottom: 180px;
   font-size: 18px;
   line-height: 25px;
+}
+@media (max-width: 1199px) {
+  .promotion__year-text p {
+    margin-bottom: 180px;
+    line-height: 25px;
+  }
 }
 @media (max-width: 767px) {
   .promotion__year-text p {
@@ -4416,6 +4464,10 @@ button,
   border-radius: 50%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .social__link:hover:not(.focus-visible) {
@@ -4584,6 +4636,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .subscription__control::before {
   content: "";
@@ -5122,6 +5178,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .trainers__button:hover:not(.focus-visible) {

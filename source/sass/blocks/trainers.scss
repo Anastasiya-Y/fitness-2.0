@@ -272,6 +272,8 @@
 
   transition: all $trans-default;
 
+  user-select: none;
+
   @include hover {
     color: $color-sapphire;
 

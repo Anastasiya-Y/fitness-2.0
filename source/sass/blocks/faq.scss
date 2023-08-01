@@ -190,6 +190,8 @@
 
   transition: all $trans-default;
 
+  user-select: none;
+
   &::before,
   &::after {
     content: "";
