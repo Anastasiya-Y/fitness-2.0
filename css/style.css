@@ -1635,6 +1635,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn.focus-visible:focus {
@@ -1941,6 +1945,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .faq__accordion-button::before,
@@ -2100,6 +2108,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .feedback__button.focus-visible:focus {
@@ -2207,6 +2219,10 @@ button,
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .form__field-wrapper input.focus-visible:focus {
@@ -2563,6 +2579,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gym__video-button::before {
@@ -2814,11 +2834,12 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin: 0 0 0 7px;
   padding: 2px 0 0 0;
+  max-width: 920px;
   list-style-type: none;
 }
 
@@ -2845,6 +2866,10 @@ button,
   color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-nav__link::before {
@@ -3172,6 +3197,10 @@ button,
   border-radius: 50%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .social__link.focus-visible:focus {
@@ -3280,6 +3309,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .subscription__control::before {
@@ -3620,6 +3653,10 @@ button,
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .trainers__button.focus-visible:focus {
@@ -4176,6 +4213,10 @@ button,
     margin: 0;
   }
 
+  .main-nav__list {
+    max-width: 430px;
+  }
+
   .main-nav__item:not(:last-child) {
     margin-right: 11px;
   }
@@ -4275,6 +4316,15 @@ button,
 
   .promotion__year-text {
     width: auto;
+  }
+
+  .promotion__year-text h3 {
+    margin-bottom: 3px;
+  }
+
+  .promotion__year-text p {
+    margin-bottom: 180px;
+    line-height: 25px;
   }
 
   .subscription {
@@ -4819,6 +4869,7 @@ button,
   .main-nav__list {
     display: block;
     margin: 0 0 29px -5px;
+    max-width: none;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
@@ -4948,6 +4999,11 @@ button,
 
   .promotion__year-text {
     padding: 41px 44px 37px 44px;
+  }
+
+  .promotion__year-text h3 {
+    margin-bottom: 3px;
+    font-size: 26px;
   }
 
   .promotion__year-text span {
