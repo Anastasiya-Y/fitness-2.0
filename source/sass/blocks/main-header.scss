@@ -19,14 +19,15 @@
 
 .main-header__wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .main-header__logo {
   display: flex;
+  align-self: flex-start;
   margin-right: 10px;
   padding: 10px 0 8px 0;
+  flex-shrink: 0;
 
   @include hover {
     & img {
@@ -69,6 +70,11 @@
     width: 67px;
     height: 13px;
   }
+}
+
+.main-header__phone-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-header__phone {

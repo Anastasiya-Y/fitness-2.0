@@ -75,8 +75,8 @@
 
 .promotion__option--year {
   display: flex;
-  flex-wrap: wrap;
   padding: 0;
+  align-self: start;
 
   border: none;
 
@@ -85,6 +85,8 @@
   @include vp-1199 {
     display: grid;
     padding: 0;
+    max-width: 678px;
+    margin: 0 auto;
 
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -95,6 +97,7 @@
     display: flex;
     flex-direction: column;
     padding: 0;
+    max-width: none;
   }
 }
 
@@ -111,6 +114,7 @@
 .promotion__option:not(:last-child) {
   @include vp-767 {
     margin-bottom: 30px;
+    width: 100%;
   }
 }
 
@@ -321,5 +325,10 @@
 }
 
 .promotion__year-image-wrapper img {
-  width: 100%;
+  max-width: none;
+  object-fit: cover;
+
+  @include vp-1199 {
+    width: 100%;
+  }
 }

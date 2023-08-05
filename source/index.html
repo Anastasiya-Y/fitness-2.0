@@ -26,7 +26,9 @@
             <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу сайта Supergym.">
               <img src="img/svg/logo.svg" width="120" height="24" alt="Логотип сайта фитнес-центра Supergym.">
             </a>
-            <a class="main-header__phone" href="tel:88005555555" aria-label="Позвонить в фитнес-центр Supergym.">8-800-555-55-55</a>
+            <div class="main-header__phone-wrapper">
+              <a class="main-header__phone" href="tel:88005555555" aria-label="Позвонить в фитнес-центр Supergym.">8-800-555-55-55</a>
+            </div>
           </div>
         </div>
       </header>
@@ -758,10 +760,10 @@
                 <div class="form__container" data-form-validate data-callback="base">
                   <form action="https://echo.htmlacademy.ru/" method="post">
                     <fieldset class="form__fields">
-                      <div class="form__field-wrapper" data-validate-type="text" data-limitation="letters" data-message-extra="Поле заполнено неверно" data-required>
+                      <div class="form__field-wrapper" data-validate-type="text" data-limitation="letters-and-hyphen" data-message-extra="Текст ошибки" data-required>
                         <input type="text" name="form-field-name" placeholder="Имя" minlength="1" aria-label="Введите имя." required>
                       </div>
-                      <div class="form__field-wrapper" data-validate-type="phone" data-message-extra="Поле заполнено неверно" data-on-input-validate data-required>
+                      <div class="form__field-wrapper" data-validate-type="phone" data-message-extra="Текст ошибки" data-on-input-validate data-required>
                         <input type="tel" name="form-field-tel" placeholder="Телефон" aria-label="Введите номер телефона." required>
                       </div>
                     </fieldset>
@@ -824,14 +826,14 @@
             <div class="main-footer__social social">
               <ul class="social__list">
                 <li class="social__item">
-                  <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Страница HTML Academy во VKontakte." target="_blank">
+                  <a class="social__link" href="#" aria-label="Страница HTML Academy во VKontakte." target="_blank">
                     <svg width="12" height="7">
                       <use href="img/sprite.svg#icon-vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link" href="https://ok.ru/htmlacademy" aria-label="Страница HTML Academy в Одноклассниках." target="_blank">
+                  <a class="social__link" href="#" aria-label="Страница HTML Academy в Одноклассниках." target="_blank">
                     <svg width="9" height="16">
                       <use href="img/sprite.svg#icon-ok"></use>
                     </svg>

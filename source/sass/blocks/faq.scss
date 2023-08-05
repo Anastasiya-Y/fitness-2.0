@@ -90,6 +90,20 @@
 
   transition: all $trans-default;
 
+  @include hover {
+    box-shadow: inset 0 0 0 1px $color-sapphire;
+
+    background-image: none;
+    color: $color-sapphire;
+  }
+
+  @include focus {
+    box-shadow: inset 0 0 0 1px $color-sapphire;
+
+    background-image: none;
+    color: $color-sapphire;
+  }
+
   @include vp-1199 {
     width: auto;
   }

@@ -260,6 +260,7 @@
 
 .games__image-wrapper img {
   object-fit: cover;
+  max-width: none;
 
   @include vp-1199 {
     width: 100%;

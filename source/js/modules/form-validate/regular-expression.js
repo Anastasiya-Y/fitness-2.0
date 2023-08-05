@@ -11,6 +11,8 @@ export const getLimitationsRegEx = (limitation) => {
       return /[^a-zA-Zа-яёА-ЯЁ\-\s]/g;
     case 'letters':
       return /[^a-zA-Zа-яёА-ЯЁ\s]/g;
+    case 'letters-and-hyphen':
+      return /[^a-zA-Zа-яёА-ЯЁ\s\-]/g;
     case 'letters-and-digit':
       return /[^a-zA-Zа-яёА-ЯЁ\s\d]/g;
     case 'cyrillic':

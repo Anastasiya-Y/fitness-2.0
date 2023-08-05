@@ -38,6 +38,12 @@
 
 .feedback__wrapper {
   position: relative;
+  max-width: 1143px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    max-width: 678px;
+  }
 }
 
 .feedback__container {
@@ -50,7 +56,7 @@
   }
 
   @include vp-767 {
-    width: 226px;
+    width: 78%;
   }
 }
 
@@ -188,7 +194,7 @@
   }
 
   @include vp-767 {
-    top: 151px;
+    top: 45%;
 
     width: 33px;
     height: 33px;
@@ -206,11 +212,7 @@
 }
 
 .feedback__button--prev {
-  left: 226px;
-
-  @include vp-1339 {
-    left: 0;
-  }
+  left: 217px;
 
   @include vp-1199 {
     left: -18px;
@@ -222,11 +224,7 @@
 }
 
 .feedback__button--next {
-  right: 226px;
-
-  @include vp-1339 {
-    right: 0;
-  }
+  right: 217px;
 
   @include vp-1199 {
     right: -18px;
