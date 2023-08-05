@@ -121,6 +121,13 @@
     background-image: $red-blue-linear-left-to-right;
     box-shadow: none;
   }
+
+  @include active-not-focus-visible {
+    color: $color-default-white;
+
+    background-image: $red-blue-linear-left-to-right;
+    box-shadow: none;
+  }
 }
 
 .faq__content {
