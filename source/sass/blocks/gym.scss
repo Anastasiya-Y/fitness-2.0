@@ -263,6 +263,8 @@
     background-size: 100%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+
+    transition: all $trans-default;
   }
 
   &::after {
@@ -277,6 +279,8 @@
     background-color: $color-default-white;
 
     clip-path: polygon(0 0, 0% 100%, 100% 50%);
+
+    transition: all $trans-default;
   }
 
   @include hover {

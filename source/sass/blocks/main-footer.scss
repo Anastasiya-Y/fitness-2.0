@@ -28,6 +28,8 @@
   padding: 10px;
   position: relative;
 
+  transition: all $trans-default;
+
   &::before {
     content: "";
     position: absolute;
