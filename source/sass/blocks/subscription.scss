@@ -380,6 +380,13 @@
 
   color: $color-sapphire;
 
+  @include active-not-focus-visible {
+    color: rgba($color-default-white, 0.7);
+    box-shadow: none;
+
+    background-image: $red-blue-linear-left-to-right;
+  }
+
   @include vp-1199 {
     min-width: 208px;
     width: auto;
