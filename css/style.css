@@ -3606,6 +3606,14 @@ button,
   color: #102654;
 }
 
+.subscription__link:active:not(.focus-visible):not(.focus-visible) {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ed0233), to(#003eb7));
+  background-image: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
+}
+
 .subscription__image-wrapper {
   position: absolute;
   right: 0;
