@@ -3706,7 +3706,7 @@ button,
 
 .trainers__info h3 {
   position: absolute;
-  top: 249px;
+  bottom: 26px;
   left: 50%;
   margin: 0 0 0 3px;
   font-weight: 700;
@@ -4546,7 +4546,7 @@ button,
   }
 
   .trainers__container {
-    width: 566px;
+    width: 100%;
   }
 
   .trainers__slide {
@@ -4554,12 +4554,20 @@ button,
     height: 294px;
   }
 
+  .trainers__slide:hover .trainers__info h3 {
+    margin-left: 2px;
+  }
+
+  .trainers__slide:active:not(.focus-visible):not(.focus-visible) .trainers__info h3 {
+    margin-left: 2px;
+  }
+
   .trainers__info {
     padding-left: 55px;
   }
 
   .trainers__info h3 {
-    margin-left: 2px;
+    margin-left: 6px;
   }
 
   .trainers__info-wrapper p {
@@ -5029,6 +5037,12 @@ button,
     height: 13px;
   }
 
+  .main-header__phone-wrapper {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
   .main-header__phone {
     margin: -2px -6px 0 6px;
     padding: 6px;
@@ -5306,16 +5320,29 @@ button,
   }
 
   .trainers__content-wrapper {
-    width: 226px;
-  }
-
-  .trainers__container {
-    width: 226px;
+    margin: 0 32px;
+    width: calc(100% - 64px);
   }
 
   .trainers__slide {
-    width: 224px;
-    height: 274px;
+    width: 100%;
+    height: 85.6vw;
+  }
+
+  .trainers__slide:hover .trainers__info h3 {
+    margin-left: 0;
+  }
+
+  .trainers__slide:hover .trainers__info-wrapper p {
+    margin-left: 0;
+  }
+
+  .trainers__slide:active:not(.focus-visible):not(.focus-visible) .trainers__info h3 {
+    margin-left: 0;
+  }
+
+  .trainers__slide:active:not(.focus-visible):not(.focus-visible) .trainers__info-wrapper p {
+    margin-left: 0;
   }
 
   .trainers__info {
@@ -5323,23 +5350,25 @@ button,
   }
 
   .trainers__info h3 {
-    top: 225px;
-    margin-left: 6px;
+    margin-left: 0;
+    text-align: center;
   }
 
   .trainers__info-wrapper p {
-    margin-left: 53px;
+    margin-left: 0;
+    text-align: center;
   }
 
   .trainers__image-wrapper img {
-    width: auto;
+    width: 100%;
+    height: 85.6vw;
     max-width: none;
     -o-object-fit: cover;
     object-fit: cover;
   }
 
   .trainers__button {
-    top: 122px;
+    top: 44%;
     width: 33px;
     height: 33px;
   }
